@@ -14,17 +14,18 @@ body{padding: 0;}
 @import "variables";
 @import "grid";
 @import "fonts";
-@import "sprites";
 @import "reset";
 //@import "libs/popup-slide";
 //@import "libs/fancybox3";
 //@import "libs/slick-theme";
 //@import "libs/select2";
 //@import "libs/scrollbar";
-//@import "libs/popup-slide";
+@import "libs/popup-slide";
 
 //components
 //@import "components/to-top";
+@import "components/burger";
+@import "components/lang-switch";
 
 //widgets
 //@import "widgets/pagination";
@@ -32,5 +33,5 @@ body{padding: 0;}
 //@import "widgets/validation";
 
 //layouts
-//@import "layouts/header";
+@import "layouts/header";
 //@import "layouts/footer";
