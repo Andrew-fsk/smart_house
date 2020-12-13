@@ -6,6 +6,15 @@ header {
     @include justify-content(space-between);
     position: relative;
     padding-left: 285px;
+    @include breakpoint(lg){
+      padding-left: 200px;
+    }
+    @include breakpoint(md-down){
+      padding-left: 160px;
+    }
+    @include breakpoint(sm-down){
+      padding-left: 15px;
+    }
   }
   .logo-wrap{
     background: #FFFFFF;
@@ -14,6 +23,24 @@ header {
     position: absolute;
     left: 15px;
     top: 0;
+    img{
+      max-width: 100%;
+      @include breakpoint(sm-down){
+        max-height: 60px;
+      }
+    }
+    @include breakpoint(lg){
+      max-width: 185px;
+    }
+    @include breakpoint(md-down){
+      max-width: 150px;
+    }
+    @include breakpoint(sm-down){
+      position: initial;
+      left: initial;
+      top: initial;
+      padding: 10px 0;
+    }
     &:after{
       content: '';
       position: absolute;
@@ -24,6 +51,9 @@ header {
       clip-path: polygon(0 0, 50% 100%, 100% 0);
       box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
       background: #FFFFFF;
+      @include breakpoint(sm-down){
+        content: initial;
+      }
     }
   }
   .nav{
@@ -31,8 +61,14 @@ header {
     @include flexbox;
     @include align-items(center);
     padding: 30px 0;
+    @include breakpoint(sm-down){
+      display: none;
+    }
     .item-level-0{
       margin: 0 20px;
+      @include breakpoint(md-down){
+        margin: 0 15px;
+      }
     }
     .link-level-0{
       font-weight: normal;
@@ -41,6 +77,9 @@ header {
       color: #171717;
       text-decoration: none;
       transition: all .2s;
+      @include breakpoint(md-down){
+        font-size: 14px;
+      }
     }
   }
   .header-right{
@@ -55,6 +94,22 @@ header {
     line-height: 24px;
     color: #171717;
     margin-right: 30px;
+    &.mob{
+      display: none;
+      color: #ffffff;
+    }
+    @include breakpoint(md-down){
+      font-size: 16px;
+    }
+    @include breakpoint(smxs){
+      display: none;
+      &.mob{
+        display: inline-block;
+        margin-right: 0;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 
@@ -66,9 +121,16 @@ header {
   width: 100vw;
   height: 100vh;
   overflow-y: auto;
+  @include breakpoint(xs){
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
   .container{
     padding-left: 15px;
     @include align-items(initial);
+    @include breakpoint(xs){
+      @include flex-direction(column);
+    }
   }
   &.popup-slider{
     display: block;
@@ -78,6 +140,9 @@ header {
     @include flex-direction(column);
     @include align-items(flex-start);
     margin-bottom: 20px;
+    @include breakpoint(sm-down){
+      @include flexbox;
+    }
     &.small{
       .item-level-0{
         margin-bottom: 0;
@@ -85,6 +150,12 @@ header {
       .link-level-0{
         font-size: 16px;
         line-height: 40px;
+        @include breakpoint(sm-down){
+          font-size: 14px;
+          line-height: initial;
+          margin-bottom: 10px;
+          display: inline-block;
+        }
       }
     }
     .item-level-0{
@@ -97,6 +168,10 @@ header {
       line-height: 36px;
       color: #FFFFFF;
       transition: all .2s;
+      @include breakpoint(sm-down){
+        font-size: 20px;
+        line-height: initial;
+      }
       &:hover{
         color: $green;
       }
@@ -106,6 +181,11 @@ header {
     width: 50%;
     padding-right: 15px;
     border-right: 2px solid #000000;
+    @include breakpoint(xs){
+      padding-right: 0;
+      border-right: none;
+      width: 100%;
+    }
   }
   .right{
     width: 50%;
@@ -113,8 +193,18 @@ header {
     @include flexbox;
     @include flex-direction(column);
     @include justify-content(space-between);
-    .row{
+    @include breakpoint(sm-down){
+      padding-left: 25px;
+    }
+    @include breakpoint(xs) {
+      padding-left: 0;
+      width: 100%;
+    }
+      .row{
       @include flexbox;
+        @include breakpoint(smxs){
+          @include flex-direction(column);
+        }
     }
     .title{
       font-weight: bold;
@@ -126,6 +216,9 @@ header {
   }
   .right-menu{
     @include list-reset();
+    @include breakpoint(sm-down){
+      margin-bottom: 25px;
+    }
   }
   .right-menu-link{
     font-size: 15px;
@@ -133,12 +226,18 @@ header {
     color: #FFFFFF;
     transition: all .2s;
     text-decoration: none;
+    @include breakpoint(sm-down){
+      font-size: 13px;
+    }
     &:hover{
       color: $green;
     }
   }
   .column-left, .column-right{
     width: 50%;
+    @include breakpoint(smxs){
+      width: 100%;
+    }
   }
 }
 

@@ -3,6 +3,22 @@
   width: 53px;
   height: 24px;
   margin-right: 35px;
+  padding-bottom: 15px;
+  @include breakpoint(lg){
+    margin-right: 15px;
+  }
+  @include breakpoint(sm-down){
+    margin-right: 15px;
+  }
+  &:hover{
+    &:after{
+      @include rotate(-180);
+    }
+    .lang-item{
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
   &:after{
     content: '';
     position: absolute;
@@ -14,6 +30,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("../img/svg/down-arrow.svg");
+    transition: all .2s;
   }
   .lang-item{
     width: 24px;
@@ -31,7 +48,7 @@
     }
     @for $i from 1 through 3 {
       &:nth-child( #{$i}) {
-        top: calc(100% * #{$i});
+        top: calc(100% * #{$i - 1});
       }
     }
     &.active{

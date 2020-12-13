@@ -17,6 +17,7 @@ html, body {
   -webkit-text-size-adjust: 100%;
 }
 body {
+  background-color: gray;
   @include flexbox;
   @include flex-direction(column);
   position: relative;

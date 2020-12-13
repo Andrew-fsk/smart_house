@@ -30,6 +30,7 @@ html, body {
 }
 
 body {
+  background-color: gray;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
