@@ -30,7 +30,6 @@ html, body {
 }
 
 body {
-  background-color: gray;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -310,6 +309,11 @@ html[data-useragent*="MSIE 10.0"] .attention {
 .overflow-wrap {
   overflow-y: hidden;
   overflow-x: auto;
+}
+
+h1 span {
+  color: #01A229;
+  font-weight: 800;
 }
 
 /*# sourceMappingURL=base.css.map */

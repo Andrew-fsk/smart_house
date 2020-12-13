@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    head
+        title= 'Title'
+        link(rel='stylesheet', href='../css/index.css', type='text/css' )
+        link(rel='stylesheet', href='../css/base.css', type='text/css' )
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap' )
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap' )
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    body
+        .wrap
+            include block/header.pug
+            block content
+        include block/footer.pug
+        include block/scripts.pug

@@ -17,7 +17,6 @@ html, body {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  background-color: gray;
   @include flexbox;
   @include flex-direction(column);
   position: relative;
@@ -160,3 +159,9 @@ html[data-useragent*='MSIE 10.0'] {
   overflow-y: hidden;
   overflow-x: auto;
 }
+ h1{
+   span{
+     color: $green;
+     font-weight: 800;
+   }
+ }

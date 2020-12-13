@@ -1,0 +1,23 @@
+.main-slider-wrap
+    .left-image
+        img(src='../img/slider.png')
+    a(href='#').play-circle
+    .main-slider
+        each val, index in [1,2,3,4,5]
+                .slide
+                    .left
+                        .text Новый уровень комфорта
+                        h1 Умный дом под ключ
+                        a(href='#').calc-button Рассчитать стоимость
+                    .right.object-fit
+                        img(src='../img/slider1.png').slide-img
+                        .info-item.multi
+                            img(src='../img/svg/speaker 1.svg').icon
+                            .title Мультирум
+                            ul.text
+                                each val in [1, 2, 3, 4, 5]
+                                    li= val
+                        .info-item.climat
+                            img(src='../img/svg/climat.svg').icon
+                            .title Климат-контроль
+                            .text . Краткое описание или список. «Умный дом» позволит Вам контролировать их работу, управлять ею, осуществлять постоянный мониторинг потребления ресурсов
