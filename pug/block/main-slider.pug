@@ -21,24 +21,4 @@
                             img(src='../img/svg/climat.svg').icon
                             .title Климат-контроль
                             .text . Краткое описание или список. «Умный дом» позволит Вам контролировать их работу, управлять ею, осуществлять постоянный мониторинг потребления ресурсов
-.numbers-wrap
-    .container
-        .number-list
-            each val, index in [12,1730,82,12700]
-                .num-item
-                    .num=val
-                    .description тысяч квадратных метров умных домов
-.function-wrap
-    .container
-        .title-text управляйте домом с помощью одного клика
-        .title-line
-            h2 Функции
-            a(href='#').more Больше функций
-        .function-list
-            each val, index in ['Мультирум','Раздвижные ворота','Климат','Ролеты','Безопасность','Отопление']
-                a(href="#").item.object-fit
-                    img(src='../img/d1.png')
-                    .title=val
-        .ac-jc
-            a(href='#').more.mob Больше функций
 

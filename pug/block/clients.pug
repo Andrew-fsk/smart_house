@@ -1,0 +1,11 @@
+.clients-wrap
+    .container
+        .title-text Ваш дом сделает все за вас
+        h2 Управляйте своим умным домом из любой точки мира – с планшета или смартфона
+        .clients-slider
+            each val, index in ['Яндекс Алиса','Apple Homepod','Apple Homekit','Google Home','Siri','Siri','Siri']
+                .client-wrap
+                    .client
+                        .client-logo.object-fit
+                            img(src='../img/client.png')
+                        .name= val

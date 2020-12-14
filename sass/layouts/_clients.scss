@@ -1,0 +1,73 @@
+.clients-wrap{
+  padding: 100px 0 80px 0;
+  background: #F1F3F4;
+  @include breakpoint(sm-down){
+    padding: 50px 0;
+  }
+  h2{
+    margin-bottom: 80px;
+    @include breakpoint(sm-down){
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.client-wrap{
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  margin: 0 15px;
+}
+
+.client{
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(center);
+  .name{
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+  }
+}
+
+.client-logo{
+  position: relative;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 10px;
+  img{
+    object-fit: contain;
+  }
+}
+
+.clients-slider{
+  padding: 0 65px;
+  margin: 0 -65px;
+  @include breakpoint(lg){
+    margin: 0;
+    padding: 0 35px;
+  }
+  @include breakpoint(md-down){
+    margin: 0;
+    padding: 0 35px;
+  }
+  .slick-list{
+    margin: 0 -15px;
+  }
+  .slick-arrow{
+    width: 22px;
+    height: 66px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: calc(50% - 33px);
+  }
+  .slick-prev{
+    left: 0;
+    background-image: url("../img/svg/client-prev.svg");
+  }
+  .slick-next{
+    right: 0;
+    background-image: url("../img/svg/client-next.svg");
+  }
+}

@@ -1568,6 +1568,19 @@ header .phone.mob {
   }
 }
 
+.function-wrap {
+  padding-bottom: 100px;
+}
+@media (max-width: 1024px) {
+  .function-wrap {
+    padding-bottom: 50px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .function-wrap {
+    padding-bottom: 50px;
+  }
+}
 .function-wrap .title-line {
   display: -webkit-box;
   display: -moz-box;
@@ -1725,6 +1738,108 @@ header .phone.mob {
     -webkit-transform: translateX(-50%) translateY(50%);
     transform: translateX(-50%) translateY(50%);
   }
+}
+
+.clients-wrap {
+  padding: 100px 0 80px 0;
+  background: #F1F3F4;
+}
+@media (max-width: 1024px) {
+  .clients-wrap {
+    padding: 50px 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .clients-wrap {
+    padding: 50px 0;
+  }
+}
+.clients-wrap h2 {
+  margin-bottom: 80px;
+}
+@media (max-width: 1024px) {
+  .clients-wrap h2 {
+    margin-bottom: 45px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .clients-wrap h2 {
+    margin-bottom: 45px;
+  }
+}
+
+.client-wrap {
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  margin: 0 15px;
+}
+
+.client {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.client .name {
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.client-logo {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 10px;
+}
+.client-logo img {
+  object-fit: contain;
+}
+
+.clients-slider {
+  padding: 0 65px;
+  margin: 0 -65px;
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .clients-slider {
+    margin: 0;
+    padding: 0 35px;
+  }
+}
+@media (max-width: 1199px) {
+  .clients-slider {
+    margin: 0;
+    padding: 0 35px;
+  }
+}
+.clients-slider .slick-list {
+  margin: 0 -15px;
+}
+.clients-slider .slick-arrow {
+  width: 22px;
+  height: 66px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: calc(50% - 33px);
+}
+.clients-slider .slick-prev {
+  left: 0;
+  background-image: url("../img/svg/client-prev.svg");
+}
+.clients-slider .slick-next {
+  right: 0;
+  background-image: url("../img/svg/client-next.svg");
 }
 
 /*# sourceMappingURL=index.css.map */
