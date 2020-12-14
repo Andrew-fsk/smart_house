@@ -16,6 +16,9 @@ $breakpoints: 992, 500;
     font-weight: normal;
     color: $heading-color;
   }
+  span{
+    color: $green;
+  }
 
   @for $i from 1 through $heading_count {
     $margin:  nth($heading-margin, $i);

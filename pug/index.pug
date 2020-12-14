@@ -23,3 +23,24 @@ block content
             .ac-jc
                 a(href='#').more.mob Больше функций
     include  block/clients.pug
+    .tabs-wrapper
+        .container
+            .title-text Как "Умный дом" изменит Ваше жилье?
+            h2 <span>Новый уровень</span> вашего комфорта и безопасности
+            p.description Интеграция всех инженерных систем с «Умным домом» позволит Вам контролировать <br> их работу,  управлять ею, осуществлять постоянный мониторинг потребления ресурсов. <br>
+                | Всё это Вы можете сделать с экрана своего смартфона
+            .tabs
+                ul.tab-list
+                    each val, index in ['Пульт от телевизора', 'Пульт от кондиционера', 'Регулятор теплого пола', 'Пульт от Blue Ray', 'Терморегулятор радиатора', 'Выключатели']
+                        li.tab-item
+                            a(href=`#tab-${index}`).tab-link= val
+                each val, index in ['Пульт от телевизора', 'Пульт от кондиционера', 'Регулятор теплого пола', 'Пульт от Blue Ray', 'Терморегулятор радиатора', 'Выключатели']
+                    div(id=`tab-${index}`).tab
+                        .left
+                            .title Сейчас #{index}
+                            img(src='../img/tab1.png')
+                        .right
+                            .title c MiMiSmart #{index}
+                            img(src='../img/tab2.png')
+
+

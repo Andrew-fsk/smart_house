@@ -64,4 +64,18 @@ $(document).ready(function () {
             }
         ]
     });
+
+
+        $('.tabs').each(function(){
+            var tabContainers = $(this).children('div'),
+                listItem = $(this).find('.tab-list>li');
+            tabContainers.hide().filter(':first').show();
+            $(this).find('.tab-list a').click(function () {
+                tabContainers.hide();
+                tabContainers.filter(this.hash).show();
+                $(listItem).removeClass('active');
+                $(this).parent('li').addClass('active');
+                return false;
+            }).filter(':first').click();
+    });
 })

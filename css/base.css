@@ -86,6 +86,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #171717;
 }
 
+span {
+  color: #01A229;
+}
+
 h1, .h1 {
   margin-bottom: 40px;
   font-weight: 600;
