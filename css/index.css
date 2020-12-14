@@ -2056,4 +2056,253 @@ header .phone.mob {
   color: #01A229;
 }
 
+.step-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .step-list {
+    margin: 0 -15px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .step-list {
+    margin: 0 -15px;
+  }
+}
+@media (max-width: 500px) {
+  .step-list {
+    margin: 0;
+  }
+}
+.step-list:after {
+  content: "";
+  position: absolute;
+  right: 60px;
+  top: 64px;
+  width: 2px;
+  height: 51%;
+  background-repeat: repeat-y;
+  background-image: url("../img/svg/dashed arrow big.svg");
+}
+@media (max-width: 1024px) {
+  .step-list:after {
+    content: initial;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .step-list:after {
+    content: initial;
+  }
+}
+
+.steps-wrap {
+  background: #C5F3D0;
+  padding: 100px 0;
+}
+@media (max-width: 1024px) {
+  .steps-wrap {
+    padding: 50px 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .steps-wrap {
+    padding: 50px 0;
+  }
+}
+.steps-wrap h2 {
+  margin-bottom: 60px;
+}
+@media (max-width: 1024px) {
+  .steps-wrap h2 {
+    margin-bottom: 45px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .steps-wrap h2 {
+    margin-bottom: 45px;
+  }
+}
+
+.step {
+  width: 33.33%;
+  margin-bottom: 60px;
+  padding-right: 70px;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .step {
+    order: initial !important;
+    width: 50%;
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .step {
+    order: initial !important;
+    width: 50%;
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .step {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
+.step:after {
+  content: "";
+  position: absolute;
+  right: 60px;
+  top: 60px;
+  width: 100px;
+  height: 20px;
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../img/svg/dashed arrow.svg");
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+@media (max-width: 1024px) {
+  .step:after {
+    content: initial;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .step:after {
+    content: initial;
+  }
+}
+.step:nth-of-type(1), .step:nth-of-type(2), .step:nth-of-type(3) {
+  order: -5;
+}
+.step:nth-of-type(1):after, .step:nth-of-type(2):after, .step:nth-of-type(3):after {
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.step:nth-of-type(3):after {
+  background-size: 150px;
+  background-image: url("../img/svg/dashed arrow small.svg");
+}
+.step:nth-of-type(6) {
+  order: -4;
+}
+.step:nth-of-type(5) {
+  order: -3;
+}
+.step:nth-of-type(4) {
+  order: -2;
+}
+.step .icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+.step .icon .num {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  width: 30px;
+  height: 30px;
+  background-color: #01A229;
+  border-radius: 50%;
+  position: absolute;
+  left: 74%;
+  bottom: 0;
+}
+.step .title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+@media (max-width: 500px) {
+  .step .title {
+    font-size: 18px;
+  }
+}
+.step .text {
+  height: 130px;
+  font-size: 15px;
+  overflow: hidden;
+  line-height: 26px;
+}
+
 /*# sourceMappingURL=index.css.map */
