@@ -78,4 +78,44 @@ $(document).ready(function () {
                 return false;
             }).filter(':first').click();
     });
+
+    let slider1 = document.getElementById('square-slide')
+    let m2 = 10;
+
+    $('.calc-block-wrap .calc-item input').change(function () {
+        m2 = 10;
+
+        $('.calc-block-wrap .calc-item input').each(function () {
+            if($(this).is(':checked')){
+                m2 = m2 + $(this).prev().data('sum');
+            }
+        })
+        console.log(m2);
+        setValues($('.square span').text(), m2);
+
+    });
+
+    noUiSlider.create(slider1, {
+        start: 25,
+        animate: true,
+        range: {
+            min: 0,
+            max: 450
+        },
+        connect: [true, false],
+        pips: {
+            mode: 'count',
+            values: 10,
+            density: 5
+        }
+    });
+    slider1.noUiSlider.on('update', function (values, handle) {
+        let value = parseInt(values[handle])
+        setValues(value, m2)
+    });
 })
+
+function setValues(value, m2) {
+    $('.square span').text(value);
+    $('.calc-block-wrap .total-line span').text(value * m2 + 'грн');
+}

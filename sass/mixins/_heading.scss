@@ -16,9 +16,7 @@ $breakpoints: 992, 500;
     font-weight: normal;
     color: $heading-color;
   }
-  span{
-    color: $green;
-  }
+
 
   @for $i from 1 through $heading_count {
     $margin:  nth($heading-margin, $i);
@@ -32,6 +30,9 @@ $breakpoints: 992, 500;
     $xs-size: nth($xs-heading-font-size, $i);
 
     #{"h#{$i}, .h#{$i}"} {
+      span{
+        color: $green;
+      }
       margin-bottom: $margin + px;
       @if ($uppercase != 0) {
         text-transform: uppercase;

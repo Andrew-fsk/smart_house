@@ -1,0 +1,209 @@
+.calc-block-wrap{
+  padding: 100px 0;
+  @include breakpoint(sm-down){
+    padding: 50px 0;
+  }
+  h2{
+    margin-bottom: 60px;
+    @include breakpoint(sm-down){
+      margin-bottom: 45px;
+    }
+  }
+  .row{
+    @include flexbox;
+    @include breakpoint(sm-down){
+      @include flex-direction(column);
+    }
+  }
+  .calc-column{
+    width: 50%;
+    @include flexbox;
+    @include breakpoint(sm-down){
+      width: 100%;
+    }
+  }
+  .left{
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(space-between);
+    padding-right: 60px;
+    @include breakpoint(sm-down){
+      padding-right: 0;
+    }
+  }
+  .square-line{
+    margin-bottom: 45px;
+    @include flexbox;
+    @include align-items(center);
+    @include breakpoint(smxs){
+      @include flex-direction(column);
+    }
+  }
+  .square{
+    padding: 15px 32px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    color: #01A229;
+    border: 2px solid #01A229;
+    border-radius: 3px;
+    @include breakpoint(smxs){
+      margin-left: 0;
+      margin-top: 10px;
+    }
+    sup{
+      vertical-align: super;
+      font-size: smaller;
+    }
+  }
+  .right{
+    @include flex-wrap(wrap);
+    margin: 0 -4px;
+  }
+  .left-top{
+    @include breakpoint(sm-down){
+      padding-bottom: 130px;
+    }
+  }
+  .calc-item{
+    padding: 20px 7px;
+    width: calc(33.33% - 8px);
+    margin: 0 4px 8px 4px;
+    background: #F1F3F4;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(space-between);
+    @include breakpoint(smxs){
+      width: calc(50% - 8px);
+    }
+    .icon{
+      width: 64px;
+      height: 64px;
+      margin-bottom: 10px;
+    }
+    input{
+      display: none;
+      &:checked + .checkbox{
+        background: linear-gradient(180deg, #00AF2C 0%, #009C27 100%);
+        box-shadow: none;
+        &:after{
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          @include transform(translate(-50%, -50%));
+          width: 24px;
+          height: 24px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 24px;
+          background-image: url("../img/svg/check.svg");
+        }
+      }
+    }
+    .checkbox{
+      width: 30px;
+      height: 30px;
+      background: #FFFFFF;
+      border: 1px solid #E0E4E8;
+      box-shadow: inset 2px 4px 6px #C6D3DD;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      border-radius: 50%;
+    }
+    .title{
+      font-size: 16px;
+      line-height: 130%;
+      text-align: center;
+      @include breakpoint(smxs){
+        font-size: 13px;
+      }
+    }
+  }
+  .square-slide-wrap{
+    width: 100%;
+    .noUi-marker-horizontal.noUi-marker{
+      width: 1px;
+      height: 20px;
+      top: 15px;
+    }
+    .noUi-marker-horizontal.noUi-marker-large{
+      height: 50px;
+      width: 1px;
+      top: 0;
+    }
+    .noUi-pips-horizontal{
+      margin-top: 30px;
+    }
+    .noUi-value{
+      font-size: 15px;
+      top: 50px;
+      color: #767676;
+    }
+    .noUi-target{
+      border: none;
+      box-shadow: none;
+      background: #E6EBED;
+      border-radius: 3px;
+      height: 10px;
+    }
+    .noUi-connect{
+      background-color: $green;
+    }
+    .noUi-handle{
+      right: -8px;
+      top: -10px;
+      background: linear-gradient(180deg, #00AF2C 0%, #009C27 100%);
+      border-radius: 3px;
+      width: 10px;
+      height: 32px;
+      border: none;
+      box-shadow: none;
+      &:after,
+      &:before{
+        content: initial;
+      }
+    }
+  }
+  .left-top,
+  .left-bottom,{
+    width: 100%;
+  }
+
+  .calc-button{
+    margin-bottom: 30px;
+  }
+  .total-line{
+    @include flexbox;
+    @include align-items(center);
+    margin-bottom: 20px;
+    span{
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 36px;
+      color: #171717;
+      margin-left: 15px;
+    }
+  }
+  .calc-text{
+    font-size: 15px;
+    line-height: 26px;
+    color: #767676;
+    &.mob{
+      display: none;
+    }
+    @include breakpoint(sm-down){
+      display: none;
+      &.mob{
+        display: block;
+      }
+    }
+  }
+}
+
