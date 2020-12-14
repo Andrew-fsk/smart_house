@@ -1,0 +1,119 @@
+.function-wrap{
+  .title-line{
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(space-between);
+    margin-bottom: 45px;
+    h2{
+      margin-bottom: 0;
+    }
+  }
+  .more{
+    font-size: 16px;
+    line-height: 26px;
+    text-align: right;
+    text-decoration: none;
+    position: relative;
+    &.mob{
+      display: none;
+      @include breakpoint(smxs){
+        display: inline-block;
+        margin: auto;
+      }
+    }
+    @include breakpoint(smxs){
+      display: none;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 3px;
+      width: 100%;
+      height: 1px;
+      background-color: $green;
+    }
+  }
+}
+
+.function-list{
+  @include flexbox;
+  @include flex-wrap(wrap);
+  margin: 0 -15px;
+  @include breakpoint(smxs){
+    margin: 0;
+  }
+  .item{
+    width: calc(33.33% - 30px);
+    margin: 0 15px 40px 15px;
+    position: relative;
+    height: 330px;
+    border-radius: 3px;
+    overflow: hidden;
+    @include breakpoint(md-down){
+      height: 235px;
+
+    }
+    @include breakpoint(sm-down){
+      width: calc(50% - 30px);
+    }
+    @include breakpoint(smxs){
+      margin-bottom: 15px;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.4);
+      }
+    }
+    &:hover{
+      .title{
+        background-color: $green;
+        color: #ffffff;
+        @include breakpoint(smxs){
+          color: #ffffff;
+          background-color: initial;
+        }
+      }
+    }
+  }
+  .title{
+    white-space: nowrap;
+    padding: 12px 30px;
+    background-color: #ffffff;
+    border-radius: 3px 3px 0px 0px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @include transform(translateX(-50%));
+    z-index: 2;
+    transition: all .2s;
+    @include breakpoint(md-down){
+      padding: 5px 30px;
+      font-size: 16px;
+    }
+    @include breakpoint(smxs){
+
+      color: #ffffff;
+      width: 100%;
+      bottom: 50%;
+      background-color: initial;
+      -moz-transform: translateX(-50%) translateY(50%);
+      -o-transform: translateX(-50%) translateY(50%);
+      -ms-transform: translateX(-50%) translateY(50%);
+      -webkit-transform: translateX(-50%) translateY(50%);
+      transform: translateX(-50%) translateY(50%);
+    }
+  }
+}

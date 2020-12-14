@@ -316,4 +316,18 @@ h1 span {
   font-weight: 800;
 }
 
+.title-text {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #171717;
+  margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  .title-text {
+    text-align: center;
+  }
+}
+
 /*# sourceMappingURL=base.css.map */
