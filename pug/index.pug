@@ -79,4 +79,17 @@ block content
                                 span.checkbox
                         .calc-text.mob Данный расчет носит предварительный характер и указывает на порядок цены. Стоимость в данном случае не является окончательной, она может изменяться, как в меньшую, так и в большую сторону
     include  block/small-form.pug
+    .completed-projects-wrap
+        .container
+            .title-line
+                h2 Выполненые <span>проекты</span>
+                a(href='#').more Больше проектов
+            .project-slider
+                each value in [1,2,3,4,5]
+                    .project.object-fit
+                        img(src='../img/project.png')
+                        a(href='#').play-circle.white
+            .ac-jc
+                a(href='#').more.mob Больше проектов
+
 

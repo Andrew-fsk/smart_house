@@ -16,11 +16,38 @@ $(document).ready(function () {
         dots: false,
         infinite: true,
         speed: 500,
-        fade: false,
+        fade: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
         swipeToSlide: true
+    });
+
+    $('.project-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        fade: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        swipeToSlide: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.clients-slider').slick({

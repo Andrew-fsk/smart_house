@@ -3,15 +3,7 @@
   @include breakpoint(sm-down){
     padding-bottom: 50px;
   }
-  .title-line{
-    @include flexbox;
-    @include align-items(center);
-    @include justify-content(space-between);
-    margin-bottom: 45px;
-    h2{
-      margin-bottom: 0;
-    }
-  }
+
   .more{
     font-size: 16px;
     line-height: 26px;
@@ -119,5 +111,14 @@
       -webkit-transform: translateX(-50%) translateY(50%);
       transform: translateX(-50%) translateY(50%);
     }
+  }
+}
+.title-line{
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-between);
+  margin-bottom: 45px;
+  h2{
+    margin-bottom: 0;
   }
 }
