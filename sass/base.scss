@@ -177,3 +177,12 @@ html[data-useragent*='MSIE 10.0'] {
     text-align: center;
   }
 }
+
+.form-text{
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 45px;
+  @include breakpoint(sm-down){
+    margin-bottom: 20px;
+  }
+}

@@ -29,6 +29,7 @@ body{padding: 0;}
 @import "components/button";
 @import "components/lang-switch";
 @import "components/object-fit";
+@import "components/validation";
 
 //widgets
 //@import "widgets/pagination";
@@ -44,4 +45,5 @@ body{padding: 0;}
 @import "layouts/tabs-block";
 @import "layouts/step";
 @import "layouts/calc-block";
+@import "layouts/smal-form";
 //@import "layouts/footer";

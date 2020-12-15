@@ -342,4 +342,20 @@ h1 span {
   }
 }
 
+.form-text {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 45px;
+}
+@media (max-width: 1024px) {
+  .form-text {
+    margin-bottom: 20px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .form-text {
+    margin-bottom: 20px;
+  }
+}
+
 /*# sourceMappingURL=base.css.map */

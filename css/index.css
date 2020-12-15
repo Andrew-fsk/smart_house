@@ -1077,6 +1077,65 @@ body {
   object-fit: cover;
 }
 
+.validation-field {
+  position: relative;
+}
+.validation-field input {
+  background: #FFFFFF;
+  border-radius: 3px;
+  border: none;
+  height: 55px;
+  padding: 15px 25px;
+  width: 100%;
+}
+.validation-field input:focus + .placeholder {
+  opacity: 0;
+}
+.validation-field .placeholder {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.2s;
+  font-size: 15px;
+  line-height: 26px;
+  color: #767676;
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.validation-field .placeholder.active {
+  opacity: 0;
+}
+
+.form-submit {
+  cursor: pointer;
+  display: inline-block;
+  background: linear-gradient(180deg, #00AF2C 0%, #009C27 100%);
+  border-radius: 3px;
+  height: 55px;
+  padding: 18px 20px;
+}
+.form-submit input {
+  display: none;
+}
+.form-submit span {
+  width: 100%;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  display: block;
+}
+
 header {
   background-color: #ffffff;
   position: relative;
@@ -3003,6 +3062,90 @@ header .phone.mob {
   }
   .calc-block-wrap .calc-text.mob {
     display: block;
+  }
+}
+
+.small-form-wrap {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.small-form-wrap .container {
+  position: relative;
+  z-index: 1;
+  max-width: 945px;
+}
+@media (max-width: 1199px) {
+  .small-form-wrap .container {
+    max-width: 100%;
+  }
+}
+.small-form-wrap:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.75;
+}
+@media (max-width: 1024px) {
+  .small-form-wrap {
+    padding: 50px 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .small-form-wrap {
+    padding: 50px 0;
+  }
+}
+.small-form-wrap h2, .small-form-wrap .form-text {
+  color: #ffffff;
+  text-align: center;
+}
+.small-form-wrap .small-form-line {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0 -15px;
+}
+@media (max-width: 1024px) {
+  .small-form-wrap .small-form-line {
+    margin: 0;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .small-form-wrap .small-form-line {
+    margin: 0;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.small-form-wrap .small-form-line .validation-field, .small-form-wrap .small-form-line .form-submit {
+  width: calc(33.33% - 30px);
+  margin: 0 15px;
+}
+@media (max-width: 1024px) {
+  .small-form-wrap .small-form-line .validation-field, .small-form-wrap .small-form-line .form-submit {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 15px auto;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .small-form-wrap .small-form-line .validation-field, .small-form-wrap .small-form-line .form-submit {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 15px auto;
   }
 }
 

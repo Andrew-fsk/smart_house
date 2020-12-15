@@ -113,6 +113,16 @@ $(document).ready(function () {
         let value = parseInt(values[handle])
         setValues(value, m2)
     });
+
+    $('.js-input').on('input', function (e) {
+        let placeholder = jQuery(this).closest(".validation-field").find('.placeholder');
+        if (jQuery(this).val()) {
+            placeholder.addClass('active');
+        } else {
+            placeholder.removeClass('active');
+        }
+    });
+
 })
 
 function setValues(value, m2) {
