@@ -91,5 +91,17 @@ block content
                         a(href='#').play-circle.white
             .ac-jc
                 a(href='#').more.mob Больше проектов
-
-
+    .show-room-wrap
+        .container
+            h2  Посетите наши <span>шоу-румы</span>
+            .show-room-list
+                each value in ['Капля колорита','Нежный дом','Просто почувствуй','Будь в топе']
+                    .item
+                        .column
+                            .info
+                                .title "#{value}"
+                                .address г. Киев, ул. Жамбила Жабаева 22, офис 18
+                            a(href='#').write-button Записаться
+                        .img.object-fit
+                            img(src='../img/room.png')
+                            .zoom

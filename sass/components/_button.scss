@@ -66,6 +66,23 @@
   }
 }
 
+.write-button{
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #01A229;
+  text-decoration: none;
+  padding: 16px 33px;
+  border: 2px solid #01A229;
+  border-radius: 3px;
+  transition: all .3s;
+  &:hover{
+    background-color: $green;
+    color: #ffffff;
+  }
+}
+
 @keyframes pulse {
   from{
     opacity: 1;
