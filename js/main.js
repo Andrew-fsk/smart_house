@@ -150,6 +150,11 @@ $(document).ready(function () {
         }
     });
 
+    $('.footer-trigger').on('click touchend', function () {
+        $(this).parent().next().slideToggle();
+        $(this).parent().toggleClass('active');
+        return false;
+    })
 })
 
 function setValues(value, m2) {

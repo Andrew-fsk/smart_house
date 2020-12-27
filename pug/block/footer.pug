@@ -1,5 +1,5 @@
 footer
-    .container
+    .container.desktop
         .column
             a(href='/').logo-wrap
                 img(src='../img/logo.png')
@@ -12,14 +12,15 @@ footer
                 a(href="#").social-item.inst
                 a(href="#").social-item.facebook
                 a(href="#").social-item.vk
-            .copyriting Перепечатка материалов с сайта<br> запрещена.<br> 2009-2020. SmartHouse  <br>Все права защищены.
+            .copyriting Перепечатка материалов с сайта<br> запрещена.<br> 2009-2020. SmartHouse <br>Все права защищены.
         .column
             .title Возможности
-                .footer-nav
-                    each _, i in Array(17)
-                        a(href='#').footer-link link #{i}
+            .footer-nav
+                each _, i in Array(17)
+                    a(href='#').footer-link link #{i}
         .column
-            .title О компании
+            div
+                .title О компании
                 .footer-nav
                     each _, i in Array(10)
                         a(href='#').footer-link link #{i}
@@ -28,3 +29,37 @@ footer
                     img(src='../img/playmarket.png')
                 a(href='#')
                     img(src='../img/appstore.png')
+    .container.mob
+            .menu-column
+                .title Контакты
+                    .footer-trigger
+                div
+                    .contact-list
+                        a(href='tel:+ 38 (067) 821-47-76').phone + 38 (067) 821-47-76
+                        .address Главный офис: 04080, г. Киев, ул. Жамбила Жабаева 22, офис 18  <a href="#" class="offices">Другие офисы</a>
+                        a(href='mailto:info@smarthouse.ua').mail info@smarthouse.ua
+                        .work-time Пн-Пт с 9-00 до 18-00
+                    .social-list
+                        a(href="#").social-item.inst
+                        a(href="#").social-item.facebook
+                        a(href="#").social-item.vk
+                    .app-links
+                        a(href='#')
+                            img(src='../img/playmarket.png')
+                        a(href='#')
+                            img(src='../img/appstore.png')
+            .menu-column
+                .title Возможности
+                    .footer-trigger
+                div
+                    .footer-nav
+                        each _, i in Array(17)
+                            a(href='#').footer-link link #{i}
+            .menu-column
+                .title О компании
+                    .footer-trigger
+                div
+                    .footer-nav
+                        each _, i in Array(10)
+                            a(href='#').footer-link link #{i}
+            .copyriting Перепечатка материалов с сайта<br> запрещена.<br> 2009-2020. SmartHouse <br>Все права защищены.
