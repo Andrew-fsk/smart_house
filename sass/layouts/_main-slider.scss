@@ -33,6 +33,9 @@
     @include breakpoint(md-down) {
       display: none;
     }
+    @include breakpoint(sm-down){
+      display: none;
+    }
   }
 }
 
@@ -41,6 +44,9 @@
   .slide {
     @include flexbox;
     @include breakpoint(md-down) {
+      @include flex-direction(column);
+    }
+    @include breakpoint(sm-down) {
       @include flex-direction(column);
     }
 
@@ -61,6 +67,11 @@
       }
       @include breakpoint(sm-down) {
         width: 750px;
+        padding: 50px 15px;
+        margin: auto;
+        @include flexbox;
+        @include flex-direction(column);
+        @include align-items(center);
       }
       @include breakpoint(xs) {
         width: 100%;
@@ -86,6 +97,7 @@
         height: 600px;
       }
       @include breakpoint(sm-down) {
+        width: 100%;
         height: 400px;
       }
       .slide-img {
@@ -113,6 +125,11 @@
       height: 45px;
       background-size: 20px;
     }
+    @include breakpoint(sm-down) {
+      width: 45px;
+      height: 45px;
+      background-size: 20px;
+    }
 
     &.slick-next {
       bottom: 0;
@@ -128,6 +145,9 @@
       }
       @include breakpoint(sm-down){
         bottom: 25%;
+        right: 10px;
+        left: initial;
+        background-color: #4F4F4F;
       }
     }
 
@@ -143,6 +163,7 @@
       }
       @include breakpoint(sm-down){
         bottom: 25%;
+        left: 10px;
       }
     }
   }

@@ -73,9 +73,9 @@
 }
 .noUi-connects {
   width: 100%;
+  cursor: pointer;
   height: 100%;
   position: relative;
-  z-index: 1;
   overflow: hidden;
   z-index: 0;
   border-radius: 3px;
@@ -215,6 +215,7 @@
   }
 }
 .noUi-touch-area {
+  cursor: pointer;
   height: 100%;
   width: 100%;
 }
