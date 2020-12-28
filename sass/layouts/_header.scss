@@ -2,23 +2,27 @@ header {
   background-color: #ffffff;
   position: relative;
   z-index: 29;
+  &.fixed{
+    position: fixed;
+    box-shadow: 0px 20px 100px rgba(63, 81, 103, 0.2);
+    left: 0;
+    top: 0;
+    width: 100%;
+    .logo-wrap{
+      opacity: 0;
+      @include breakpoint(sm-down){
+        opacity: 1;
+      }
+    }
+  }
   .container {
     @include flexbox;
     @include align-items(center);
     @include justify-content(space-between);
     position: relative;
-    padding-left: 285px;
-    @include breakpoint(lg){
-      padding-left: 200px;
-    }
-    @include breakpoint(md-down){
-      padding-left: 160px;
-    }
-    @include breakpoint(sm-down){
-      padding-left: 15px;
-    }
   }
   .logo-wrap{
+    transition: all .4s;
     background: #FFFFFF;
     box-shadow: 0 4px 50px rgba(0, 0, 0, 0.05);
     padding: 18px 33px 6px 33px;

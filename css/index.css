@@ -1161,6 +1161,26 @@ header {
   position: relative;
   z-index: 29;
 }
+header.fixed {
+  position: fixed;
+  box-shadow: 0px 20px 100px rgba(63, 81, 103, 0.2);
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+header.fixed .logo-wrap {
+  opacity: 0;
+}
+@media (max-width: 1024px) {
+  header.fixed .logo-wrap {
+    opacity: 1;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  header.fixed .logo-wrap {
+    opacity: 1;
+  }
+}
 header .container {
   display: -webkit-box;
   display: -moz-box;
@@ -1177,29 +1197,9 @@ header .container {
   justify-content: space-between;
   -ms-flex-pack: space-between;
   position: relative;
-  padding-left: 285px;
-}
-@media (min-width: 1200px) and (max-width: 1399px) {
-  header .container {
-    padding-left: 200px;
-  }
-}
-@media (max-width: 1199px) {
-  header .container {
-    padding-left: 160px;
-  }
-}
-@media (max-width: 1024px) {
-  header .container {
-    padding-left: 15px;
-  }
-}
-@media (hover: none) and (pointer: coarse) {
-  header .container {
-    padding-left: 15px;
-  }
 }
 header .logo-wrap {
+  transition: all 0.4s;
   background: #FFFFFF;
   box-shadow: 0 4px 50px rgba(0, 0, 0, 0.05);
   padding: 18px 33px 6px 33px;
