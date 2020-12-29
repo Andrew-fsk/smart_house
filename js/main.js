@@ -12,6 +12,12 @@ $(document).ready(function () {
         }
     });
 
+    $(document).on('click touchend', '.main-slider .calc-button', function () {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(".calc-block-wrap").offset().top - $('header').innerHeight()
+        }, 2000);
+    })
+
     if( !isMobile.any() ){
         if($(window).scrollTop() > 0){
             $('header').addClass('fixed');

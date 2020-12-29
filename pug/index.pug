@@ -88,7 +88,7 @@ block content
                 each value in [1,2,3,4,5]
                     .project.object-fit
                         img(src='../img/project.png')
-                        a(href='#').play-circle.white
+                        a(href="https://www.youtube.com/embed/GhP_nSPHBkw?autoplay=1" class='fancybox.iframe various' data-type='iframe').play-circle.white
             .ac-jc
                 a(href='#').more.mob Больше проектов
     .show-room-wrap
@@ -104,4 +104,4 @@ block content
                             .write-button(data-src='../templates/form-success.html' data-fancybox='' data-type="iframe") Записаться
                         .img.object-fit
                             img(src='../img/room.png')
-                            .zoom
+                            a.zoom(data-src='../img/room.png' data-type='image' data-fancybox)
