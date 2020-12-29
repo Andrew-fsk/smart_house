@@ -19,6 +19,7 @@ $(document).ready(function () {
     })
 
     if( !isMobile.any() ){
+        setHeight();
         if($(window).scrollTop() > 0){
             $('header').addClass('fixed');
             $('body').css('padding-top', $('header').innerHeight());
@@ -203,7 +204,9 @@ $(window).on('scroll', function () {
 
 $(window).resize(function () {
     if( !isMobile.any() ){
+        setHeight();
         $('header .logo-container').css('padding-left', $('.logo-wrap').innerWidth() + 20);
+    }else{
     }
 })
 
@@ -257,4 +260,9 @@ function headerFixed() {
     }
 
 
+}
+
+function setHeight() {
+    let height = $(window).innerHeight() - $('header').innerHeight();
+    $('.page-404-wrap').css('height', height )
 }

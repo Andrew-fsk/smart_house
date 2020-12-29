@@ -1,0 +1,63 @@
+.page-404-wrap {
+  @include flexbox;
+  @include align-items(center);
+@include breakpoint(sm-down){
+  height: initial !important;
+  padding: 25px 0;
+}
+  .title-404 {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #171717;
+    margin-bottom: 13px;
+    display: block;
+    @include breakpoint(sm-down){
+      font-size: 26px;
+    }
+  }
+
+  .text-404 {
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #171717;
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .number-404 {
+    font-weight: 900;
+    font-size: 300px;
+    color: #01A229;
+    @include breakpoint(md-down){
+      font-size: 250px;
+    }
+    @include breakpoint(sm-down){
+      font-size: 35vw;
+    }
+  }
+
+  .row-404 {
+    @include flexbox;
+    @include align-items(flex-end);
+    margin-bottom: 30px;
+    @include breakpoint(sm-down){
+      @include justify-content(center);
+    }
+  }
+
+  .image-404 {
+    margin-left: -17%;
+    @include breakpoint(lg){
+      max-width: 60%;
+    }
+    @include breakpoint(md-down){
+      max-width: 60%;
+    }
+    @include breakpoint(sm-down){
+      display: none;
+    }
+  }
+}
