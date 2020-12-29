@@ -45,3 +45,26 @@
     }
   }
 }
+
+.small-form-container{
+  position: relative;
+  z-index: 1;
+  padding: 0 30px;
+  @include breakpoint(sm-down){
+    padding: 0 10px;
+  }
+  h2{
+    font-weight: 800;
+  }
+}
+
+.form-page-wrap{
+  padding-top: 215px;
+  padding-bottom: 140px;
+  .form-text{
+    font-size: 18px;
+  }
+  @include breakpoint(sm-down){
+    padding: 100px 0;
+  }
+}

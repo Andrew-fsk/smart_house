@@ -133,38 +133,41 @@ $(document).ready(function () {
     });
 
     let slider1 = document.getElementById('square-slide')
-    let m2 = 10;
+    if(slider1){
+        let m2 = 10;
 
-    $('.calc-block-wrap .calc-item input').change(function () {
-        m2 = 10;
+        $('.calc-block-wrap .calc-item input').change(function () {
+            m2 = 10;
 
-        $('.calc-block-wrap .calc-item input').each(function () {
-            if($(this).is(':checked')){
-                m2 = m2 + $(this).prev().data('sum');
+            $('.calc-block-wrap .calc-item input').each(function () {
+                if($(this).is(':checked')){
+                    m2 = m2 + $(this).prev().data('sum');
+                }
+            })
+            setValues($('.square span').text(), m2);
+
+        });
+
+        noUiSlider.create(slider1, {
+            start: 25,
+            animate: true,
+            range: {
+                min: 0,
+                max: 450
+            },
+            connect: [true, false],
+            pips: {
+                mode: 'count',
+                values: 10,
+                density: 5
             }
-        })
-        setValues($('.square span').text(), m2);
+        });
+        slider1.noUiSlider.on('update', function (values, handle) {
+            let value = parseInt(values[handle])
+            setValues(value, m2)
+        });
+    }
 
-    });
-
-    noUiSlider.create(slider1, {
-        start: 25,
-        animate: true,
-        range: {
-            min: 0,
-            max: 450
-        },
-        connect: [true, false],
-        pips: {
-            mode: 'count',
-            values: 10,
-            density: 5
-        }
-    });
-    slider1.noUiSlider.on('update', function (values, handle) {
-        let value = parseInt(values[handle])
-        setValues(value, m2)
-    });
 
     $('.js-input').on('input', function (e) {
         let placeholder = jQuery(this).closest(".validation-field").find('.placeholder');

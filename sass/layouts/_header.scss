@@ -2,6 +2,9 @@ header {
   background-color: #ffffff;
   position: relative;
   z-index: 29;
+  @include breakpoint(sm-down){
+    box-shadow: 0px 20px 100px rgba(63, 81, 103, 0.2);
+  }
   &.fixed{
     position: fixed;
     box-shadow: 0px 20px 100px rgba(63, 81, 103, 0.2);
@@ -23,8 +26,8 @@ header {
   }
   .logo-wrap{
     transition: all .4s;
-    background: #FFFFFF;
-    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.05);
+    background-color: #FFFFFF;
+    box-shadow: 0 43px 88px rgba(0, 0, 0, 0.15);
     padding: 18px 33px 6px 33px;
     position: absolute;
     left: 15px;
@@ -45,7 +48,9 @@ header {
       position: initial;
       left: initial;
       top: initial;
+      background-color: transparent;
       padding: 10px 0;
+      box-shadow: none;
     }
     &:after{
       content: '';

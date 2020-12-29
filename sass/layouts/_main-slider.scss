@@ -189,6 +189,23 @@
       left: 53%;
       bottom: 32%;
     }
+    &.control {
+      left: 26%;
+      bottom: 81%;
+    }
+    &.safe {
+      left: 4%;
+      bottom: 63%;
+    }
+    &.electric {
+      left: 52%;
+      bottom: 65%;
+    }
+    &.waterprof {
+      left: 55%;
+      z-index: 19;
+      bottom: 48%;
+    }
 
     .title {
       transition: all .2s;

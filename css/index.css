@@ -2059,6 +2059,16 @@ header {
   position: relative;
   z-index: 29;
 }
+@media (max-width: 1024px) {
+  header {
+    box-shadow: 0px 20px 100px rgba(63, 81, 103, 0.2);
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  header {
+    box-shadow: 0px 20px 100px rgba(63, 81, 103, 0.2);
+  }
+}
 header.fixed {
   position: fixed;
   box-shadow: 0px 20px 100px rgba(63, 81, 103, 0.2);
@@ -2098,8 +2108,8 @@ header .container {
 }
 header .logo-wrap {
   transition: all 0.4s;
-  background: #FFFFFF;
-  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.05);
+  background-color: #FFFFFF;
+  box-shadow: 0 43px 88px rgba(0, 0, 0, 0.15);
   padding: 18px 33px 6px 33px;
   position: absolute;
   left: 15px;
@@ -2133,7 +2143,9 @@ header .logo-wrap img {
     position: initial;
     left: initial;
     top: initial;
+    background-color: transparent;
     padding: 10px 0;
+    box-shadow: none;
   }
 }
 @media (hover: none) and (pointer: coarse) {
@@ -2141,7 +2153,9 @@ header .logo-wrap img {
     position: initial;
     left: initial;
     top: initial;
+    background-color: transparent;
     padding: 10px 0;
+    box-shadow: none;
   }
 }
 header .logo-wrap:after {
@@ -3165,6 +3179,23 @@ footer .offices:after {
 .main-slider .info-item.multi {
   left: 53%;
   bottom: 32%;
+}
+.main-slider .info-item.control {
+  left: 26%;
+  bottom: 81%;
+}
+.main-slider .info-item.safe {
+  left: 4%;
+  bottom: 63%;
+}
+.main-slider .info-item.electric {
+  left: 52%;
+  bottom: 65%;
+}
+.main-slider .info-item.waterprof {
+  left: 55%;
+  z-index: 19;
+  bottom: 48%;
 }
 .main-slider .info-item .title {
   transition: all 0.2s;
@@ -4484,6 +4515,43 @@ footer .offices:after {
     width: 100%;
     max-width: 280px;
     margin: 0 auto 15px auto;
+  }
+}
+
+.small-form-container {
+  position: relative;
+  z-index: 1;
+  padding: 0 30px;
+}
+@media (max-width: 1024px) {
+  .small-form-container {
+    padding: 0 10px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .small-form-container {
+    padding: 0 10px;
+  }
+}
+.small-form-container h2 {
+  font-weight: 800;
+}
+
+.form-page-wrap {
+  padding-top: 215px;
+  padding-bottom: 140px;
+}
+.form-page-wrap .form-text {
+  font-size: 18px;
+}
+@media (max-width: 1024px) {
+  .form-page-wrap {
+    padding: 100px 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .form-page-wrap {
+    padding: 100px 0;
   }
 }
 

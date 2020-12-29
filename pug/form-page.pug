@@ -1,0 +1,22 @@
+extends base
+
+block content
+    .form-page-wrap
+        .container
+            .small-form-wrap.object-fit
+                img(src='../img/form page.png').form-bg
+                .small-form-container
+                    h2 Заявка
+                    .form-text Оставьте заявку на проектирование и установку системы умный дом прямо сейчас и управляйте своим домом <br> дистанционно с помощью одного клика
+                    .request-form
+                        form(method="post" action="").form.js-form
+                            .small-form-line
+                                .validation-field
+                                    input(type="text" name='first_name' required).js-input
+                                    span.placeholder Представтесь, пожалуйста
+                                .validation-field
+                                    input(type="text" name='first_name' required).js-input
+                                    span.placeholder Телефон
+                                label.button.form-submit
+                                    span Оставить заявку
+                                    input.js-submit(type="submit" value="Отправить")
