@@ -1,0 +1,78 @@
+.posibility{
+  .main-image{
+    overflow: hidden;
+    position: relative;
+    height: 565px;
+    margin-bottom: 40px;
+    @include flexbox;
+    @include align-items(center);
+    @include breakpoint(sm-down){
+      height: 420px;
+    }
+    @include breakpoint(mxs){
+      height: 300px;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #01A229 0%, rgba(1, 162, 41, 0) 100%);
+      z-index: 1;
+    }
+    .text{
+      padding-left: 75px;
+      padding-right: 10px;
+      position: relative;
+      z-index: 2;
+      @include breakpoint(mxs){
+        padding-left: 15px;
+      }
+      h1{
+        margin-bottom: 10px;
+        color: #ffffff;
+      }
+    }
+    .image-text{
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 150%;
+      @include breakpoint(xs){
+        font-size: 18px;
+      }
+    }
+  }
+  p{
+    padding-left: 30px;
+    @include breakpoint(mxs){
+      padding-left: 10px;
+    }
+  }
+
+
+}
+.pos-form{
+  padding-top: 100px;
+  padding-bottom: 127px;
+  @include breakpoint(sm-down){
+    padding: 50px 0;
+  }
+  .small-form-wrap{
+    padding: 20px 0 60px 0;
+    .form-text{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.pos-func{
+  .function-list .title{
+    color: $text-color;
+    @include breakpoint(mxs){
+      color: #ffffff;
+    }
+  }
+}

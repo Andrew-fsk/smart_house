@@ -3470,7 +3470,7 @@ footer .offices:after {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
   }
 }
 .function-list .item:hover .title {
@@ -4228,6 +4228,111 @@ footer .offices:after {
 @media (hover: none) and (pointer: coarse) {
   .page-404-wrap .image-404 {
     display: none;
+  }
+}
+
+.posibility .main-image {
+  overflow: hidden;
+  position: relative;
+  height: 565px;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .posibility .main-image {
+    height: 420px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .posibility .main-image {
+    height: 420px;
+  }
+}
+@media (max-width: 600px) {
+  .posibility .main-image {
+    height: 300px;
+  }
+}
+.posibility .main-image:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #01A229 0%, rgba(1, 162, 41, 0) 100%);
+  z-index: 1;
+}
+.posibility .main-image .text {
+  padding-left: 75px;
+  padding-right: 10px;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 600px) {
+  .posibility .main-image .text {
+    padding-left: 15px;
+  }
+}
+.posibility .main-image .text h1 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.posibility .main-image .image-text {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 150%;
+}
+@media (max-width: 767px) {
+  .posibility .main-image .image-text {
+    font-size: 18px;
+  }
+}
+.posibility p {
+  padding-left: 30px;
+}
+@media (max-width: 600px) {
+  .posibility p {
+    padding-left: 10px;
+  }
+}
+
+.pos-form {
+  padding-top: 100px;
+  padding-bottom: 127px;
+}
+@media (max-width: 1024px) {
+  .pos-form {
+    padding: 50px 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .pos-form {
+    padding: 50px 0;
+  }
+}
+.pos-form .small-form-wrap {
+  padding: 20px 0 60px 0;
+}
+.pos-form .small-form-wrap .form-text {
+  margin-bottom: 20px;
+}
+
+.pos-func .function-list .title {
+  color: #171717;
+}
+@media (max-width: 600px) {
+  .pos-func .function-list .title {
+    color: #ffffff;
   }
 }
 

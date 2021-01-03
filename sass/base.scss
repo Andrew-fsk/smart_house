@@ -186,3 +186,10 @@ html[data-useragent*='MSIE 10.0'] {
     margin-bottom: 20px;
   }
 }
+
+.padding-top{
+  padding-top: 200px;
+  @include breakpoint(sm-down){
+    padding-top: 50px;
+  }
+}
