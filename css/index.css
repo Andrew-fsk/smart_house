@@ -4339,6 +4339,69 @@ footer .offices:after {
   }
 }
 
+.site-map {
+  margin-bottom: 0;
+  padding-bottom: 200px;
+}
+@media (max-width: 1024px) {
+  .site-map {
+    padding-bottom: 50px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .site-map {
+    padding-bottom: 50px;
+  }
+}
+.site-map li {
+  margin-left: 0;
+  margin-bottom: 4px;
+}
+.site-map li:after {
+  content: initial;
+}
+.site-map li a {
+  font-size: 18px;
+  color: #171717;
+  transition: all 0.2s;
+  padding: 8px;
+  border-radius: 3px;
+  display: block;
+}
+@media (max-width: 1024px) {
+  .site-map li a {
+    font-size: 14px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .site-map li a {
+    font-size: 14px;
+  }
+}
+.site-map li a:hover {
+  text-decoration: none;
+}
+.site-map li a:hover {
+  background: #C5F3D0;
+  color: #01A229;
+}
+.site-map li li a {
+  padding-left: 45px;
+  position: relative;
+}
+.site-map li li a:after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  height: 18px;
+  width: 18px;
+  top: calc(50% - 9px);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../img/svg/sitemap.svg");
+}
+
 .main-video {
   position: relative;
   overflow: hidden;

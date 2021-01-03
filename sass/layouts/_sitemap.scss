@@ -1,0 +1,50 @@
+.site-map {
+  margin-bottom: 0;
+  padding-bottom: 200px;
+  @include breakpoint(sm-down) {
+    padding-bottom: 50px;
+  }
+  li {
+    margin-left: 0;
+    margin-bottom: 4px;
+    &:after {
+      content: initial;
+    }
+    a {
+      font-size: 18px;
+      @include breakpoint(sm-down){
+        font-size: 14px;
+      }
+      color: $text-color;
+      &:hover {
+        text-decoration: none;
+      }
+      transition: all .2s;
+      padding: 8px;
+      border-radius: 3px;
+      display: block;
+      &:hover {
+        background: #C5F3D0;
+        color: $green;
+      }
+    }
+    li{
+      a{
+        padding-left: 45px;
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          left: 13px;
+          height: 18px;
+          width: 18px;
+          top: calc(50% - 9px);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          background-image: url("../img/svg/sitemap.svg");
+        }
+      }
+    }
+  }
+}
