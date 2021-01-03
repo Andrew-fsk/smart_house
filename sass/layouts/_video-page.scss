@@ -1,0 +1,86 @@
+.video-page{
+  h1{
+    margin-bottom: 30px;
+  }
+  .title-text{
+    margin-bottom: 90px;
+    @include breakpoint(sm-down){
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.video-form{
+  height: 697px;
+  padding: 135px 75px;
+  overflow: hidden;
+  position: relative;
+  @include breakpoint(md-down){
+    height: 525px;
+    padding: 90px 25px;
+  }
+  @include breakpoint(sm-down){
+    height: initial;
+    padding: 50px 15px;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+  }
+  img{
+    @include user-select(none);
+    pointer-events: none  ;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include user-select(none);
+    background-size: contain;
+    background-position: top right;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+    @include breakpoint(sm-down){
+      background-image: none;
+      background: rgba(0,0,0,.6);
+    }
+    background-image: url("../img/video form decor.png");
+  }
+  form{
+    position: relative;
+    z-index: 2;
+  }
+  .form{
+    width: 345px;
+    @include breakpoint(sm-down){
+      width: 350px;
+      max-width: 100%;
+    }
+  }
+  .form-text{
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #171717;
+    margin-bottom: 30px;
+    @include breakpoint(sm-down){
+      color: #ffffff;
+    }
+  }
+  .validation-field{
+    margin-bottom: 30px;
+    input{
+      border: 2px solid #C5F3D0;
+      &:focus{
+        border: 2px solid #01A229;
+      }
+    }
+  }
+  .form-submit{
+    width: 100%;
+  }
+}

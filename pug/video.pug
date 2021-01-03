@@ -1,0 +1,41 @@
+extends base
+
+block content
+    .padding-top.container.video-page
+        h1 Видеопрезентация <span>Умного Дома </span>
+        .title-text Подробно расскажем и покажем в онлайн-режиме возможности Умного Дома!
+        .video-form.object-fit
+            img(src="../img/video form.png")
+            form(method="post" action="").form.js-form
+                    .form-text Запишитесь на видеопрезентацию онлайн
+                    .validation-field
+                        input(type="text" name='first_name' required).js-input
+                        span.placeholder Представтесь, пожалуйста
+                    .validation-field
+                        input(type="text" name='phone' required).js-input
+                        span.placeholder Телефон
+                    label.button.form-submit
+                        span Записаться
+                        input.js-submit(type="submit" value="Отправить")
+        .completed-projects-wrap
+            .title-line
+                h2 Выполненые <span>проекты</span>
+                a(href='#').more Больше проектов
+            .project-slider
+                each value in [1,2,3,4,5]
+                    .project.object-fit
+                        img(src='../img/project.png')
+                        a(href="https://www.youtube.com/embed/GhP_nSPHBkw?autoplay=1" class='fancybox.iframe various' data-type='iframe').play-circle.white
+        .show-room-wrap
+            h2  Посетите наши <span>шоу-румы</span>
+            .show-room-list
+                each value in ['Капля колорита','Нежный дом','Просто почувствуй','Будь в топе']
+                    .item
+                        .column
+                            .info
+                                .title "#{value}"
+                                .address г. Киев, ул. Жамбила Жабаева 22, офис 18
+                            .write-button Записаться
+                        .img.object-fit
+                            img(src='../img/room.png')
+                            a.zoom(data-src='../img/room.png' data-type='image' data-fancybox)

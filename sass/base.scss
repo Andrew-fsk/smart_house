@@ -204,6 +204,10 @@ html[data-useragent*='MSIE 10.0'] {
   @include breakpoint(sm-down){
     padding-top: 50px;
   }
+
+}
+
+.text-sector{
   a{
     text-decoration: none;
     &:hover{

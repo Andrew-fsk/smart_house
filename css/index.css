@@ -3837,6 +3837,9 @@ footer .offices:after {
   margin-bottom: 10px;
   border: 2px solid transparent;
 }
+.tabs-wrapper .tab-item:after {
+  content: initial;
+}
 @media (max-width: 1024px) {
   .tabs-wrapper .tab-item {
     width: 50%;
@@ -4400,6 +4403,164 @@ footer .offices:after {
   background-size: contain;
   background-position: center;
   background-image: url("../img/svg/sitemap.svg");
+}
+
+.video-page h1 {
+  margin-bottom: 30px;
+}
+.video-page .title-text {
+  margin-bottom: 90px;
+}
+@media (max-width: 1024px) {
+  .video-page .title-text {
+    margin-bottom: 30px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .video-page .title-text {
+    margin-bottom: 30px;
+  }
+}
+
+.video-form {
+  height: 697px;
+  padding: 135px 75px;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 1199px) {
+  .video-form {
+    height: 525px;
+    padding: 90px 25px;
+  }
+}
+@media (max-width: 1024px) {
+  .video-form {
+    height: initial;
+    padding: 50px 15px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .video-form {
+    height: initial;
+    padding: 50px 15px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+  }
+}
+.video-form img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+.video-form:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+  background-image: url("../img/video form decor.png");
+}
+@media (max-width: 1024px) {
+  .video-form:after {
+    background-image: none;
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .video-form:after {
+    background-image: none;
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+.video-form form {
+  position: relative;
+  z-index: 2;
+}
+.video-form .form {
+  width: 345px;
+}
+@media (max-width: 1024px) {
+  .video-form .form {
+    width: 350px;
+    max-width: 100%;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .video-form .form {
+    width: 350px;
+    max-width: 100%;
+  }
+}
+.video-form .form-text {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #171717;
+  margin-bottom: 30px;
+}
+@media (max-width: 1024px) {
+  .video-form .form-text {
+    color: #ffffff;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .video-form .form-text {
+    color: #ffffff;
+  }
+}
+.video-form .validation-field {
+  margin-bottom: 30px;
+}
+.video-form .validation-field input {
+  border: 2px solid #C5F3D0;
+}
+.video-form .validation-field input:focus {
+  border: 2px solid #01A229;
+}
+.video-form .form-submit {
+  width: 100%;
 }
 
 .main-video {
@@ -5145,6 +5306,12 @@ footer .offices:after {
   background-repeat: no-repeat;
   top: calc(50% - 33px);
 }
+@media (max-width: 600px) {
+  .project-slider .slick-arrow {
+    height: 40px;
+    top: calc(50% - 20px);
+  }
+}
 .project-slider .slick-prev {
   left: 0;
   background-image: url("../img/svg/client-prev.svg");
@@ -5304,6 +5471,7 @@ footer .offices:after {
 @media (max-width: 600px) {
   .show-room-list .address {
     margin-bottom: 35px;
+    text-align: left;
   }
 }
 .show-room-list .address:after {

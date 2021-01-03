@@ -131,6 +131,9 @@
   }
 
   .tab-item {
+    &:after{
+      content: initial;
+    }
     list-style: none;
     margin: 0;
     margin-bottom: 10px;
