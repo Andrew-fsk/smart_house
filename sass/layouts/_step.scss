@@ -128,6 +128,8 @@
     font-size: 20px;
     line-height: 26px;
     margin-bottom: 15px;
+    height: 52px;
+    overflow: hidden;
     @include breakpoint(smxs){
       font-size: 18px;
     }

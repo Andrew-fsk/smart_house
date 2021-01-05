@@ -1,6 +1,9 @@
 .numbers-wrap{
   padding-top: 120px;
   padding-bottom: 100px;
+  @include breakpoint(sm-down){
+    padding: 50px 0;
+  }
 }
 
 .number-list{
@@ -14,6 +17,7 @@
   @include breakpoint(sm-down){
     width: 50%;
     margin-bottom: 30px;
+    padding-right: 0;
     @include flexbox;
     @include flex-direction(column);
     @include align-items(center);

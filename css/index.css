@@ -2652,6 +2652,17 @@ footer .column:last-of-type {
   -ms-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: space-between;
+  padding-left: 100px;
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  footer .column:last-of-type {
+    padding-left: 30px;
+  }
+}
+@media (max-width: 1199px) {
+  footer .column:last-of-type {
+    padding-left: 20px;
+  }
 }
 footer .logo-wrap {
   margin-bottom: 45px;
@@ -3018,6 +3029,7 @@ footer .offices:after {
 @media (max-width: 767px) {
   .main-slider .slide .left {
     width: 100%;
+    height: 275px;
   }
 }
 .main-slider .slide .left .text {
@@ -3263,6 +3275,16 @@ footer .offices:after {
   padding-top: 120px;
   padding-bottom: 100px;
 }
+@media (max-width: 1024px) {
+  .numbers-wrap {
+    padding: 50px 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .numbers-wrap {
+    padding: 50px 0;
+  }
+}
 
 .number-list {
   display: -webkit-box;
@@ -3284,6 +3306,7 @@ footer .offices:after {
   .num-item {
     width: 50%;
     margin-bottom: 30px;
+    padding-right: 0;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -3303,6 +3326,7 @@ footer .offices:after {
   .num-item {
     width: 50%;
     margin-bottom: 30px;
+    padding-right: 0;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -3642,6 +3666,11 @@ footer .offices:after {
   background-size: contain;
   background-repeat: no-repeat;
   top: calc(50% - 33px);
+}
+@media (max-width: 767px) {
+  .clients-slider .slick-arrow {
+    width: 15px;
+  }
 }
 .clients-slider .slick-prev {
   left: 0;
@@ -4103,6 +4132,8 @@ footer .offices:after {
   font-size: 20px;
   line-height: 26px;
   margin-bottom: 15px;
+  height: 52px;
+  overflow: hidden;
 }
 @media (max-width: 500px) {
   .step .title {
@@ -4958,11 +4989,11 @@ footer .offices:after {
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 24px;
-  height: 24px;
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 24px;
+  background-size: 86%;
   background-image: url("../img/svg/check.svg");
 }
 .calc-block-wrap .calc-item .checkbox {
@@ -4975,6 +5006,14 @@ footer .offices:after {
   right: 15px;
   top: 15px;
   border-radius: 50%;
+}
+@media (max-width: 767px) {
+  .calc-block-wrap .calc-item .checkbox {
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 10px;
+  }
 }
 .calc-block-wrap .calc-item .title {
   font-size: 16px;
@@ -5006,6 +5045,11 @@ footer .offices:after {
   font-size: 15px;
   top: 50px;
   color: #767676;
+}
+@media (max-width: 767px) {
+  .calc-block-wrap .square-slide-wrap .noUi-value {
+    font-size: 12px;
+  }
 }
 .calc-block-wrap .square-slide-wrap .noUi-target {
   border: none;

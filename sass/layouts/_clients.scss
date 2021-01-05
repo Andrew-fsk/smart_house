@@ -61,6 +61,9 @@
     background-size: contain;
     background-repeat: no-repeat;
     top: calc(50% - 33px);
+    @include breakpoint(xs){
+      width: 15px;
+    }
   }
   .slick-prev{
     left: 0;

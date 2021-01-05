@@ -97,6 +97,13 @@ footer {
       @include flexbox;
       @include flex-direction(column);
       @include justify-content(space-between);
+      padding-left: 100px;
+      @include breakpoint(lg){
+        padding-left: 30px;
+      }
+      @include breakpoint(md-down){
+        padding-left: 20px;
+      }
     }
 
 
