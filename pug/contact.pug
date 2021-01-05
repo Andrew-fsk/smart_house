@@ -1,0 +1,40 @@
+extends base
+
+block content
+    .padding-top.container.contact
+        h1 Контакты
+        .title-text Мы работаем во всех регионах Украины, звоните:
+        .contact-list
+            .contact-item.active
+                .city Киев
+                .line
+                    .title Адрес:
+                    .value.address 04080, г. Киев, ул. Жамбила Жабаева 22, офис 18
+                .line
+                    .title Телефон:
+                    .value <a href="tel:+38(067) 821-47-78">+38(067) 821-47-78</a>
+                .line
+                    .title E-mail:
+                    .value <a href="mailto:a.mozhayev@smarthouse.ua">a.mozhayev@smarthouse.ua</a>
+            .contact-item
+                .city Харьков
+                .line
+                    .title Адрес:
+                    .value.address 61058, г. Харьков, пр. Науки, 12
+                .line
+                    .title Телефон:
+                    .value <a href="tel:+38 (096) 256-88-11">+38 (096) 256-88-11</a>
+                .line
+                    .title E-mail:
+                    .value <a href="mailto:sh@smarthouse.ua">sh@smarthouse.ua</a>
+        #our-map
+        h2 Дилеры
+        .tabs
+            ul.tab-list
+                each val, index in ['Украина', 'Россия', 'Казахстан', 'Молдова', 'Азербайджан', 'Грузия']
+                    li.tab-item
+                        a(href=`#tab-${index}`).tab-link= val
+            div(id=`tab-0`).tab tab 1
+            div(id=`tab-1`).tab tab 2
+    script(src='../js/jquery-3.5.1.min.js')
+    script(src='../js/contact-page.js')

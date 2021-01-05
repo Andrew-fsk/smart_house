@@ -234,6 +234,11 @@ header {
       margin-bottom: 25px;
     }
   }
+  .right-menu-item{
+    &:after{
+      content: initial;
+    }
+  }
   .right-menu-link{
     font-size: 15px;
     line-height: 32px;

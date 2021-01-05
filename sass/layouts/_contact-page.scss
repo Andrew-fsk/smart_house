@@ -1,0 +1,70 @@
+.contact{
+  h1{
+    margin-bottom: 30px;
+  }
+  .title-text{
+    margin-bottom: 50px;
+    @include breakpoint(sm-down){
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.contact-list{
+  @include flexbox;
+  @include flex-wrap(wrap);
+  .contact-item{
+    width: 50%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    @include breakpoint(smxs){
+      width: 100%;
+    }
+    &.active{
+      border-color: #01A229;
+    }
+  }
+  .city{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .title{
+    font-weight: bold;
+    font-size: 16px;
+    width: 100px;
+    min-width: 100px;
+    @include breakpoint(xs){
+      margin-bottom: 10px;
+    }
+  }
+  .line{
+    @include flexbox;
+    margin-bottom: 10px;
+    @include breakpoint(xs){
+      @include flex-direction(column);
+    }
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+  .value{
+    font-size: 16px;
+    a{
+      text-decoration: none;
+      font-size: 16px;
+      @include breakpoint(xs){
+        word-break: break-all;      }
+    }
+  }
+}
+
+#our-map{
+  height: 500px;
+  margin-bottom: 100px;
+  @include breakpoint(sm-down){
+    margin-bottom: 50px;
+  }
+}

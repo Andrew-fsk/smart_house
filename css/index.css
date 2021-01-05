@@ -2477,6 +2477,9 @@ header .phone.mob {
     margin-bottom: 25px;
   }
 }
+.header-menu .right-menu-item:after {
+  content: initial;
+}
 .header-menu .right-menu-link {
   font-size: 15px;
   line-height: 32px;
@@ -5319,6 +5322,112 @@ footer .offices:after {
 .project-slider .slick-next {
   right: 0;
   background-image: url("../img/svg/client-next.svg");
+}
+
+.contact h1 {
+  margin-bottom: 30px;
+}
+.contact .title-text {
+  margin-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  .contact .title-text {
+    margin-bottom: 30px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .contact .title-text {
+    margin-bottom: 30px;
+  }
+}
+
+.contact-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.contact-list .contact-item {
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+@media (max-width: 500px) {
+  .contact-list .contact-item {
+    width: 100%;
+  }
+}
+.contact-list .contact-item.active {
+  border-color: #01A229;
+}
+.contact-list .city {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.contact-list .title {
+  font-weight: bold;
+  font-size: 16px;
+  width: 100px;
+  min-width: 100px;
+}
+@media (max-width: 767px) {
+  .contact-list .title {
+    margin-bottom: 10px;
+  }
+}
+.contact-list .line {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .contact-list .line {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.contact-list .line:last-of-type {
+  margin-bottom: 0;
+}
+.contact-list .value {
+  font-size: 16px;
+}
+.contact-list .value a {
+  text-decoration: none;
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  .contact-list .value a {
+    word-break: break-all;
+  }
+}
+
+#our-map {
+  height: 500px;
+  margin-bottom: 100px;
+}
+@media (max-width: 1024px) {
+  #our-map {
+    margin-bottom: 50px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  #our-map {
+    margin-bottom: 50px;
+  }
 }
 
 .show-room-wrap {
