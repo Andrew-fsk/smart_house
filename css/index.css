@@ -1115,6 +1115,10 @@ li.fancybox-thumbs-loading {
   background-color: #01A229;
 }
 
+.modal.no-scroll {
+  overflow: hidden !important;
+}
+
 .close-form {
   position: absolute;
   right: 20px;
@@ -1130,9 +1134,17 @@ li.fancybox-thumbs-loading {
 
 .office-modal {
   width: 1290px;
-  margin-top: 90px;
-  padding: 0 30px 40px 30px;
+  padding: 90px 20px 40px 30px;
   max-height: 75vh;
+  max-width: 100%;
+}
+@media (max-width: 500px) {
+  .office-modal {
+    padding: 90px 20px 40px 20px;
+  }
+}
+.office-modal .office-scroll {
+  max-height: calc(75vh - 90px);
 }
 .office-modal .country {
   font-weight: bold;
@@ -1150,11 +1162,30 @@ li.fancybox-thumbs-loading {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-bottom: 60px;
-  max-height: 600px;
+}
+.office-modal .office-list:last-of-type {
+  margin-bottom: 0;
 }
 .office-modal .office {
   width: 33.33%;
   margin-bottom: 25px;
+  padding-right: 30px;
+}
+@media (max-width: 1024px) {
+  .office-modal .office {
+    width: 50%;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .office-modal .office {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .office-modal .office {
+    width: 100%;
+    padding-right: 10px;
+  }
 }
 .office-modal .office .city {
   font-weight: 600;
@@ -1796,7 +1827,7 @@ li.fancybox-thumbs-loading {
 .menu-area > .scroll-element div,
 .scrollbar-inner > .scroll-element div {
   display: block;
-  height: 100%;
+  height: calc(100% - 15px);
   left: 0;
   top: 0;
 }
@@ -1813,7 +1844,7 @@ li.fancybox-thumbs-loading {
 .menu-area .scroll-element_size,
 .scrollbar-inner .scroll-element_size {
   width: 5px;
-  background-color: red;
+  background-color: #E3E4E4;
 }
 
 .menu-area > .scroll-element.scroll-y,
@@ -1842,22 +1873,22 @@ li.fancybox-thumbs-loading {
 
 .menu-area > .scroll-element .scroll-element_track,
 .scrollbar-inner > .scroll-element .scroll-element_track {
-  background-color: green;
+  background-color: #B3B3B3;
 }
 
 .menu-area > .scroll-element .scroll-bar,
 .scrollbar-inner > .scroll-element .scroll-bar {
-  background-color: green;
+  background-color: #B3B3B3;
 }
 
 .menu-area > .scroll-element:hover .scroll-bar,
 .scrollbar-inner > .scroll-element:hover .scroll-bar {
-  background-color: green;
+  background-color: #B3B3B3;
 }
 
 .menu-area > .scroll-element.scroll-draggable .scroll-bar,
 .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {
-  background-color: green;
+  background-color: #B3B3B3;
 }
 
 /* update scrollbar offset if both scrolls are visible */

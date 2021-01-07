@@ -89,7 +89,7 @@
 .menu-area > .scroll-element div,
 .scrollbar-inner > .scroll-element div {
   display: block;
-  height: 100%;
+  height: calc(100% - 15px);
   left: 0;
   top: 0;
 }
@@ -105,7 +105,7 @@
 .menu-area .scroll-element_size,
 .scrollbar-inner .scroll-element_size {
   width: 5px;
-  background-color: red;
+  background-color: #E3E4E4;
 }
 .menu-area > .scroll-element.scroll-y,
 .scrollbar-inner > .scroll-element.scroll-y {
@@ -147,13 +147,13 @@
 //}
 
 .menu-area > .scroll-element .scroll-element_track,
-.scrollbar-inner > .scroll-element .scroll-element_track { background-color: green; }
+.scrollbar-inner > .scroll-element .scroll-element_track { background-color: #B3B3B3; }
 .menu-area > .scroll-element .scroll-bar,
-.scrollbar-inner > .scroll-element .scroll-bar { background-color: green; }
+.scrollbar-inner > .scroll-element .scroll-bar { background-color: #B3B3B3; }
 .menu-area > .scroll-element:hover .scroll-bar,
-.scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: green; }
+.scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: #B3B3B3; }
 .menu-area > .scroll-element.scroll-draggable .scroll-bar,
-.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {background-color: green; }
+.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {background-color: #B3B3B3; }
 
 
 /* update scrollbar offset if both scrolls are visible */
