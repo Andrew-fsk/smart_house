@@ -22,9 +22,7 @@
     @include flex-direction(column);
     @include align-items(center);
   }
-  @include breakpoint(smxs){
-    width: 100%;
-  }
+
   .num{
     font-size: 64px;
     color: $green;
@@ -35,6 +33,9 @@
     @include breakpoint(sm-down){
       font-size: 48px;
       padding-right: 0;
+    }
+    @include breakpoint(smxs){
+      font-size: 32px;
     }
     &:after{
       content: '+';
@@ -54,6 +55,9 @@
     height: 52px;
     @include breakpoint(sm-down){
       text-align: center;
+      height: 60px;
+      line-height: 20px;
+      font-size: 14px;
     }
   }
 }

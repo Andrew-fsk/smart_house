@@ -89,6 +89,17 @@ $(document).ready(function ($) {
         ]
     });
 
+    $('.show-room-list.slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        fade: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        swipeToSlide: true,
+    });
+
     $('.clients-slider').slick({
         dots: false,
         infinite: true,
@@ -192,8 +203,15 @@ $(document).ready(function ($) {
     });
 
     $('.footer-trigger').on('click touchend', function () {
-        $(this).parent().next().slideToggle();
-        $(this).parent().toggleClass('active');
+        if($(this).parent().hasClass('active')){
+            $(this).parent().next().slideToggle();
+            $(this).parent().toggleClass('active');
+        }else{
+            $('.footer-trigger').parent().removeClass('active');
+            $('.footer-trigger').parent().next().slideUp();
+            $(this).parent().next().slideToggle();
+            $(this).parent().toggleClass('active');
+        }
         return false;
     })
 

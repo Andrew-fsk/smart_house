@@ -35,6 +35,10 @@
     margin-bottom: 45px;
     @include flexbox;
     @include align-items(center);
+    @include breakpoint(sm-down){
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
     @include breakpoint(smxs){
       @include flex-direction(column);
     }
@@ -60,6 +64,9 @@
   .right{
     @include flex-wrap(wrap);
     margin: 0 -4px;
+    @include breakpoint(sm-down){
+      order: -1;
+    }
   }
   .left-top{
     @include breakpoint(sm-down){
@@ -185,13 +192,23 @@
     width: 100%;
   }
 
-  .calc-button{
+  .left-bottom{
+    @include breakpoint(sm-down){
+      @include flexbox;
+      @include flex-direction(column);
+      @include align-items(center);
+    }
+  }
+  .calc-tex-button{
     margin-bottom: 30px;
   }
   .total-line{
     @include flexbox;
     @include align-items(center);
     margin-bottom: 20px;
+    @include breakpoint(sm-down){
+      @include justify-content(center);
+    }
     span{
       font-weight: bold;
       font-size: 30px;
@@ -204,14 +221,14 @@
     font-size: 15px;
     line-height: 26px;
     color: #767676;
+    @include breakpoint(sm-down){
+      font-size: 12px;
+      line-height: 15px;
+      margin-top: 20px;
+      text-align: center;
+    }
     &.mob{
       display: none;
-    }
-    @include breakpoint(sm-down){
-      display: none;
-      &.mob{
-        display: block;
-      }
     }
   }
 }

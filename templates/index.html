@@ -371,12 +371,12 @@
             Интеграция всех инженерных систем с «Умным домом» позволит Вам контролировать <br> их работу,  управлять ею, осуществлять постоянный мониторинг потребления ресурсов. <br>Всё это Вы можете сделать с экрана своего смартфона</p>
           <div class="tabs">
             <ul class="tab-list">
-              <li class="tab-item"><a class="tab-link" href="#tab-0">Пульт от телевизора</a></li>
-              <li class="tab-item"><a class="tab-link" href="#tab-1">Пульт от кондиционера</a></li>
-              <li class="tab-item"><a class="tab-link" href="#tab-2">Регулятор теплого пола</a></li>
-              <li class="tab-item"><a class="tab-link" href="#tab-3">Пульт от Blue Ray</a></li>
-              <li class="tab-item"><a class="tab-link" href="#tab-4">Терморегулятор радиатора</a></li>
-              <li class="tab-item"><a class="tab-link" href="#tab-5">Выключатели</a></li>
+              <li class="tab-item"><a class="tab-link" href="#tab-0" data-text="Пульт от телевизора">Пульт от телевизора</a></li>
+              <li class="tab-item"><a class="tab-link" href="#tab-1" data-text="Пульт от кондиционера">Пульт от кондиционера</a></li>
+              <li class="tab-item"><a class="tab-link" href="#tab-2" data-text="Регулятор теплого пола">Регулятор теплого пола</a></li>
+              <li class="tab-item"><a class="tab-link" href="#tab-3" data-text="Пульт от Blue Ray">Пульт от Blue Ray</a></li>
+              <li class="tab-item"><a class="tab-link" href="#tab-4" data-text="Терморегулятор радиатора">Терморегулятор радиатора</a></li>
+              <li class="tab-item"><a class="tab-link" href="#tab-5" data-text="Выключатели">Выключатели</a></li>
             </ul>
             <div class="tab" id="tab-0">
               <div class="left">
@@ -532,7 +532,6 @@
                 <label class="calc-item"><img class="icon" src="../img/idea 1.png"><span class="title" data-sum="110">Сценарий релакс</span>
                   <input type="checkbox"><span class="checkbox"></span>
                 </label>
-                <div class="calc-text mob">Данный расчет носит предварительный характер и указывает на порядок цены. Стоимость в данном случае не является окончательной, она может изменяться, как в меньшую, так и в большую сторону</div>
               </div>
             </div>
           </div>
@@ -619,6 +618,48 @@
               <div class="img object-fit"><img src="../img/room.png"><a class="zoom" data-src="../img/room.png" data-type="image" data-fancybox></a></div>
             </div>
           </div>
+          <div class="show-room-list slider">
+            <div class="item">
+              <div class="column">
+                <div class="info">
+                  <div class="title">"Капля колорита"</div>
+                  <div class="address">г. Киев, ул. Жамбила Жабаева 22, офис 18</div>
+                </div>
+                <div class="write-button" data-src="../templates/succes.html" data-fancybox data-type="ajax">Записаться</div>
+              </div>
+              <div class="img object-fit"><img src="../img/room.png"><a class="zoom" data-src="../img/room.png" data-type="image" data-fancybox></a></div>
+            </div>
+            <div class="item">
+              <div class="column">
+                <div class="info">
+                  <div class="title">"Нежный дом"</div>
+                  <div class="address">г. Киев, ул. Жамбила Жабаева 22, офис 18</div>
+                </div>
+                <div class="write-button" data-src="../templates/succes.html" data-fancybox data-type="ajax">Записаться</div>
+              </div>
+              <div class="img object-fit"><img src="../img/room.png"><a class="zoom" data-src="../img/room.png" data-type="image" data-fancybox></a></div>
+            </div>
+            <div class="item">
+              <div class="column">
+                <div class="info">
+                  <div class="title">"Просто почувствуй"</div>
+                  <div class="address">г. Киев, ул. Жамбила Жабаева 22, офис 18</div>
+                </div>
+                <div class="write-button" data-src="../templates/succes.html" data-fancybox data-type="ajax">Записаться</div>
+              </div>
+              <div class="img object-fit"><img src="../img/room.png"><a class="zoom" data-src="../img/room.png" data-type="image" data-fancybox></a></div>
+            </div>
+            <div class="item">
+              <div class="column">
+                <div class="info">
+                  <div class="title">"Будь в топе"</div>
+                  <div class="address">г. Киев, ул. Жамбила Жабаева 22, офис 18</div>
+                </div>
+                <div class="write-button" data-src="../templates/succes.html" data-fancybox data-type="ajax">Записаться</div>
+              </div>
+              <div class="img object-fit"><img src="../img/room.png"><a class="zoom" data-src="../img/room.png" data-type="image" data-fancybox></a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -648,10 +689,10 @@
       </div>
       <div class="container mob">
         <div class="menu-column">
-          <div class="title">Контакты
+          <div class="title active">Контакты
             <div class="footer-trigger"></div>
           </div>
-          <div>
+          <div style="display:block">
             <div class="contact-list"><a class="phone" href="tel:+ 38 (067) 821-47-76">+ 38 (067) 821-47-76</a>
               <div class="address">Главный офис: 04080, г. Киев, ул. Жамбила Жабаева 22, офис 18  <a href="#" class="offices">Другие офисы</a></div><a class="mail" href="mailto:info@smarthouse.ua">info@smarthouse.ua</a>
               <div class="work-time">Пн-Пт с 9-00 до 18-00</div>

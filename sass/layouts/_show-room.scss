@@ -11,6 +11,45 @@
   margin: 0 -15px;
   @include breakpoint(sm-down){
     margin: 0;
+    display: none;
+  }
+  &.slider{
+    display: none;
+    @include breakpoint(sm-down){
+      display: block;
+    }
+    padding: 0 65px;
+    .slick-list{
+      margin: 0 -15px;
+    }
+    @include breakpoint(lg){
+      margin: 0;
+      padding: 0 35px;
+    }
+    @include breakpoint(md-down){
+      margin: 0;
+      padding: 0 35px;
+    }
+    .slick-arrow{
+      width: 22px;
+      height: 66px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      top: calc(50% - 33px);
+      @include breakpoint(mxs){
+        height: 40px;
+        top: calc(50% - 20px);
+      }
+    }
+    .slick-prev{
+      left: 0;
+      background-image: url("../img/svg/client-prev.svg");
+    }
+    .slick-next{
+      right: 0;
+      background-image: url("../img/svg/client-next.svg");
+    }
   }
   .item {
     width: calc(50% - 30px);
@@ -20,8 +59,7 @@
     padding: 15px;
     @include breakpoint(sm-down){
       width: 100%;
-      margin: 0;
-      margin-bottom: 15px;
+      margin: 0 10px;
     }
     @include breakpoint(mxs){
       @include flex-direction(column-reverse);

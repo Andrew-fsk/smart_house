@@ -33,7 +33,7 @@ block content
                 ul.tab-list
                     each val, index in ['Пульт от телевизора', 'Пульт от кондиционера', 'Регулятор теплого пола', 'Пульт от Blue Ray', 'Терморегулятор радиатора', 'Выключатели']
                         li.tab-item
-                            a(href=`#tab-${index}`).tab-link= val
+                            a(href=`#tab-${index}` data-text=val).tab-link= val
                 each val, index in ['Пульт от телевизора', 'Пульт от кондиционера', 'Регулятор теплого пола', 'Пульт от Blue Ray', 'Терморегулятор радиатора', 'Выключатели']
                     div(id=`tab-${index}`).tab
                         .left
@@ -77,7 +77,6 @@ block content
                                 span(data-sum=`${(index+1) * 10}`).title= val
                                 input(type='checkbox')
                                 span.checkbox
-                        .calc-text.mob Данный расчет носит предварительный характер и указывает на порядок цены. Стоимость в данном случае не является окончательной, она может изменяться, как в меньшую, так и в большую сторону
     include  block/small-form.pug
     .completed-projects-wrap
         .container
@@ -95,6 +94,17 @@ block content
         .container
             h2  Посетите наши <span>шоу-румы</span>
             .show-room-list
+                each value in ['Капля колорита','Нежный дом','Просто почувствуй','Будь в топе']
+                    .item
+                        .column
+                            .info
+                                .title "#{value}"
+                                .address г. Киев, ул. Жамбила Жабаева 22, офис 18
+                            .write-button(data-src='../templates/succes.html' data-fancybox data-type='ajax') Записаться
+                        .img.object-fit
+                            img(src='../img/room.png')
+                            a.zoom(data-src='../img/room.png' data-type='image' data-fancybox)
+            .show-room-list.slider
                 each value in ['Капля колорита','Нежный дом','Просто почувствуй','Будь в топе']
                     .item
                         .column

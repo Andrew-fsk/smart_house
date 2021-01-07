@@ -32,6 +32,9 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-image: url("../img/svg/down arrow green.svg");
+      @include breakpoint(mxs){
+        content: initial;
+      }
     }
   }
 
@@ -47,8 +50,9 @@
       @include flex-wrap(wrap);
       @include justify-content(space-between);
     }
-    @include breakpoint(smxs) {
-      padding: 10px;
+    @include breakpoint(mxs) {
+      padding: 0;
+      border: none;
     }
   }
 
@@ -78,6 +82,10 @@
       @include breakpoint(mxs) {
         width: 100%;
         padding-top: 15px;
+        img{
+          max-width: initial;
+          max-height: calc(100% - 85px);
+        }
       }
 
       .title {
@@ -93,6 +101,9 @@
       @include breakpoint(mxs) {
         border-right: 3px solid #EFF2F3;
         border-left: 3px solid #EFF2F3;
+        height: calc(50vh - 41px);
+      min-height: 300px;
+
       }
 
       .title {
@@ -108,7 +119,10 @@
     .right {
       border: 3px solid $green;
       border-radius: 3px;
-
+      @include breakpoint(mxs){
+        height: calc(50vh - 41px);
+        min-height: 300px;
+      }
       .title {
         background: linear-gradient(180deg, #00AF2C 0%, #009C27 100%);
         border-radius: 3px;
@@ -128,6 +142,20 @@
     color: $text-color;
     padding: 20px 30px;
     display: inline-block;
+    @include breakpoint(smxs){
+      padding: 10px;
+    }
+    @include breakpoint(ultra-sxs){
+      word-break: break-word;
+    }
+    &:after{
+      display: block;
+      content: attr(data-text);
+      font-weight: bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
   }
 
   .tab-item {
@@ -141,11 +169,6 @@
     @include breakpoint(sm-down) {
       width: 50%;
     }
-    @include breakpoint(mxs) {
-      width: 100%;
-    }
-
-
     &.active {
       border-color: #01A229;
       border-radius: 3px;
