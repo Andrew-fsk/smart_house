@@ -15,7 +15,19 @@ $(document).ready(function ($) {
     $(document).on('click touchend', '.main-slider .calc-button', function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $(".calc-block-wrap").offset().top - $('header').innerHeight()
-        }, 2000);
+        }, 1200);
+        return false;
+    })
+
+    $(document).on('click touchend', '.play-button', function () {
+        $('.burger.menu-open').click();
+        $.fancybox.open({
+            src  : 'https://www.youtube.com/embed/gLO6YUUWiFg?autoplay=1',
+            type : 'iframe',
+            opts : {
+            }
+        });
+        return false;
     })
 
     if( !isMobile.any() ){
