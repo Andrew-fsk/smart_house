@@ -830,3 +830,65 @@ li.fancybox-thumbs-loading {
   background-position: center;
   background-image: url("../img/svg/close.svg");
 }
+
+.office-modal{
+  width: 1290px;
+  margin-top: 90px;
+  padding: 0 30px 40px 30px;
+  max-height: 75vh;
+  .country{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .office-list{
+    @include flexbox;
+    @include flex-wrap(wrap);
+    margin-bottom: 60px;
+    max-height: 600px;
+  }
+  .office{
+    width: 33.33%;
+    margin-bottom: 25px;
+    .city{
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 15px;
+      color: #01A229;
+    }
+  }
+  .phone,.address,.mail{
+    font-size: 15px;
+    color: #171717;
+    line-height: 26px;
+    text-decoration: none;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 15px;
+    display: inline-block;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  .address:after {
+    background-image: url("../img/svg/location.svg");
+  }
+
+  .mail:after {
+    background-image: url("../img/svg/mail.svg");
+  }
+
+  .phone:after {
+    background-image: url("../img/svg/phone.svg");
+  }
+}

@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function ($) {
     $('.header-menu').PopupSlider({
         effect: 'right',
         button: '.burger',

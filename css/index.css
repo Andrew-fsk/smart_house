@@ -1128,6 +1128,72 @@ li.fancybox-thumbs-loading {
   background-image: url("../img/svg/close.svg");
 }
 
+.office-modal {
+  width: 1290px;
+  margin-top: 90px;
+  padding: 0 30px 40px 30px;
+  max-height: 75vh;
+}
+.office-modal .country {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.office-modal .office-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  max-height: 600px;
+}
+.office-modal .office {
+  width: 33.33%;
+  margin-bottom: 25px;
+}
+.office-modal .office .city {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 15px;
+  color: #01A229;
+}
+.office-modal .phone, .office-modal .address, .office-modal .mail {
+  font-size: 15px;
+  color: #171717;
+  line-height: 26px;
+  text-decoration: none;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+.office-modal .phone:after, .office-modal .address:after, .office-modal .mail:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.office-modal .address:after {
+  background-image: url("../img/svg/location.svg");
+}
+.office-modal .mail:after {
+  background-image: url("../img/svg/mail.svg");
+}
+.office-modal .phone:after {
+  background-image: url("../img/svg/phone.svg");
+}
+
 /* Slider */
 /* Arrows */
 .slick-prev:before, .slick-next:before {
@@ -1639,6 +1705,175 @@ li.fancybox-thumbs-loading {
   padding: 5px;
   text-align: center;
   white-space: nowrap;
+}
+
+/*************** SCROLLBAR BASE CSS ***************/
+.scroll-wrapper {
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative;
+}
+
+.scroll-wrapper > .scroll-content {
+  border: none !important;
+  box-sizing: border-box !important;
+  height: auto;
+  left: 0;
+  margin: 0;
+  max-height: none;
+  max-width: none !important;
+  overflow: scroll !important;
+  padding: 0 12px 0 0;
+  position: relative !important;
+  top: 0;
+  width: auto !important;
+}
+
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+.scroll-element {
+  display: none;
+}
+
+.scroll-element, .scroll-element div {
+  box-sizing: content-box;
+}
+
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y.scroll-scrolly_visible {
+  display: block;
+}
+
+.scroll-element .scroll-bar,
+.scroll-element .scroll-arrow {
+  cursor: default;
+}
+
+.scroll-textarea {
+  border: 1px solid #cccccc;
+  border-top-color: #999999;
+}
+
+.scroll-textarea > .scroll-content {
+  overflow: hidden !important;
+}
+
+.scroll-textarea > .scroll-content > textarea {
+  border: none !important;
+  box-sizing: border-box;
+  height: 100% !important;
+  margin: 0;
+  max-height: none !important;
+  max-width: none !important;
+  overflow: scroll !important;
+  outline: none;
+  padding: 2px;
+  position: relative !important;
+  top: 0;
+  width: 100% !important;
+}
+
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+/*************** SIMPLE INNER SCROLLBAR ***************/
+.scrollbar-inner > .scroll-element,
+.menu-area > .scroll-element,
+.menu-area > .scroll-element div,
+.scrollbar-inner > .scroll-element div {
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 10;
+}
+
+.menu-area > .scroll-element div,
+.scrollbar-inner > .scroll-element div {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.menu-area > .scroll-element.scroll-x,
+.scrollbar-inner > .scroll-element.scroll-x {
+  bottom: 2px;
+  height: 8px;
+  left: 0;
+  width: 100%;
+  display: none !important;
+}
+
+.menu-area .scroll-element_size,
+.scrollbar-inner .scroll-element_size {
+  width: 5px;
+  background-color: red;
+}
+
+.menu-area > .scroll-element.scroll-y,
+.scrollbar-inner > .scroll-element.scroll-y {
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 5px;
+}
+
+.menu-area .scroll-element_outer,
+.scrollbar-inner .scroll-element_outer {
+  width: 100%;
+}
+
+.menu-area .scroll-bar,
+.scrollbar-inner .scroll-bar {
+  left: 0 !important;
+  width: 5px !important;
+}
+
+.menu-area > .scroll-element .scroll-element_outer,
+.scrollbar-inner > .scroll-element .scroll-element_outer {
+  overflow: hidden;
+}
+
+.menu-area > .scroll-element .scroll-element_track,
+.scrollbar-inner > .scroll-element .scroll-element_track {
+  background-color: green;
+}
+
+.menu-area > .scroll-element .scroll-bar,
+.scrollbar-inner > .scroll-element .scroll-bar {
+  background-color: green;
+}
+
+.menu-area > .scroll-element:hover .scroll-bar,
+.scrollbar-inner > .scroll-element:hover .scroll-bar {
+  background-color: green;
+}
+
+.menu-area > .scroll-element.scroll-draggable .scroll-bar,
+.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {
+  background-color: green;
+}
+
+/* update scrollbar offset if both scrolls are visible */
+.menu-area > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track,
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track {
+  left: -12px;
+}
+
+.menu-area > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track,
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {
+  top: -12px;
+}
+
+.menu-area > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size,
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+  top: -12px;
 }
 
 .back-layer {
