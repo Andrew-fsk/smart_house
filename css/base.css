@@ -466,4 +466,17 @@ p.green {
   }
 }
 
+@media (max-width: 1024px) {
+  .mob-scroll {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .mob-scroll {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+}
+
 /*# sourceMappingURL=base.css.map */

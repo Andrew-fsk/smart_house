@@ -228,3 +228,10 @@ p.green{
     padding: 10px;
   }
 }
+
+.mob-scroll{
+  @include breakpoint(sm-down){
+    max-height: 400px;
+    overflow-y: auto;
+  }
+}
