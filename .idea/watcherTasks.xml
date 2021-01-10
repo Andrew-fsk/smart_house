@@ -25,7 +25,7 @@
       <option name="arguments" value="$FileName$ --pretty --out $ProjectFileDir$\templates" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" />
-      <option name="exitCodeBehavior" value="ERROR" />
+      <option name="exitCodeBehavior" value="NEVER" />
       <option name="fileExtension" value="jade" />
       <option name="immediateSync" value="true" />
       <option name="name" value="Pug/Jade" />

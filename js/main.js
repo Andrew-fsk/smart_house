@@ -149,7 +149,9 @@ $(document).ready(function ($) {
             tabContainers.hide().filter(':first').show();
             $(this).find('.tab-list a').click(function () {
                 tabContainers.hide();
+                tabContainers.removeClass('current');
                 tabContainers.filter(this.hash).show();
+                tabContainers.filter(this.hash).addClass('current');
                 $(listItem).removeClass('active');
                 $(this).parent('li').addClass('active');
                 return false;
