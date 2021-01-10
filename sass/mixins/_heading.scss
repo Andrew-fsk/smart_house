@@ -20,11 +20,13 @@ $breakpoints: 992, 500;
 
   @for $i from 1 through $heading_count {
     $margin:  nth($heading-margin, $i);
+    $md-margin:  nth($md-heading-margin, $i);
     $sm-margin:  nth($sm-heading-margin, $i);
     $xs-margin:  nth($xs-heading-margin, $i);
     $uppercase: nth($heading-uppercase, $i);
     $text-align: nth($heading-text-align, $i);
     $weight: nth($heading-font-weight, $i);
+    $md-size: nth($md-heading-font-size, $i);
     $sm-size: nth($sm-heading-font-size, $i);
     $size: nth($heading-font-size, $i);
     $xs-size: nth($xs-heading-font-size, $i);
@@ -48,6 +50,30 @@ $breakpoints: 992, 500;
         font-weight: $weight;
       }
       font-size: $size + px;
+    }
+    @include breakpoint(md){
+      @if($md-heading-change == true){
+        #{"h#{$i}, .h#{$i}"} {
+          @if(($md-margin!= false)){
+            margin-bottom: $md-margin + px;
+          }
+          @if(($md-size!= false)){
+            font-size:$md-size + px;
+          }
+        }
+      }
+    }
+    @include breakpoint(sm){
+      @if($sm-heading-change == true){
+        #{"h#{$i}, .h#{$i}"} {
+          @if(($sm-margin!= false)){
+            margin-bottom: $sm-margin + px;
+          }
+          @if(($sm-size!= false)){
+            font-size:$sm-size + px;
+          }
+        }
+      }
     }
     @include breakpoint(sm){
       @if($sm-heading-change == true){

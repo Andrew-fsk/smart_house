@@ -20,6 +20,11 @@ $heading-text-align: l,l,l,l,l,l; // c = "center", l = "left", r = "right"
 $heading-color: $text-color;
 
 // SM Heading sizes
+$md-heading-change: true;
+$md-heading-margin: 55, 40, true, true, true, false;
+$md-heading-font-size: 45, 35, 24, true, true, false;
+
+// SM Heading sizes
 $sm-heading-change: true;
 $sm-heading-margin: 50, 35, true, true, true, false;
 $sm-heading-font-size: 40, 30, 24, true, true, false;

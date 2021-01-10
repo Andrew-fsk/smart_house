@@ -163,6 +163,19 @@ $(document).ready(function ($) {
             return false;
         })
 
+        $('.mob-list-trigger').on('click touchend', function () {
+            if($(this).hasClass('active')){
+                $(this).parent().next().slideToggle();
+                $(this).toggleClass('active');
+            }else{
+                $('.mob-list-trigger').parent().next().slideUp();
+                $('.mob-list-trigger').removeClass('active');
+                $(this).parent().next().slideToggle();
+                $(this).toggleClass('active');
+            }
+            return false;
+        })
+
     let slider1 = document.getElementById('square-slide')
     if(slider1){
         let m2 = 10;

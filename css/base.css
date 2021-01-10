@@ -107,6 +107,18 @@ h1 span, .h1 span {
   color: #01A229;
 }
 
+@media (min-width: 1025px) and (max-width: 1199px) {
+  h1, .h1 {
+    margin-bottom: 55px;
+    font-size: 45px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1, .h1 {
+    margin-bottom: 50px;
+    font-size: 40px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   h1, .h1 {
     margin-bottom: 50px;
@@ -128,6 +140,18 @@ h2 span, .h2 span {
   color: #01A229;
 }
 
+@media (min-width: 1025px) and (max-width: 1199px) {
+  h2, .h2 {
+    margin-bottom: 40px;
+    font-size: 35px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  h2, .h2 {
+    margin-bottom: 35px;
+    font-size: 30px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   h2, .h2 {
     margin-bottom: 35px;
@@ -149,6 +173,18 @@ h3 span, .h3 span {
   color: #01A229;
 }
 
+@media (min-width: 1025px) and (max-width: 1199px) {
+  h3, .h3 {
+    margin-bottom: truepx;
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  h3, .h3 {
+    margin-bottom: truepx;
+    font-size: 24px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   h3, .h3 {
     margin-bottom: truepx;
@@ -170,6 +206,18 @@ h4 span, .h4 span {
   color: #01A229;
 }
 
+@media (min-width: 1025px) and (max-width: 1199px) {
+  h4, .h4 {
+    margin-bottom: truepx;
+    font-size: truepx;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  h4, .h4 {
+    margin-bottom: truepx;
+    font-size: truepx;
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   h4, .h4 {
     margin-bottom: truepx;
@@ -191,6 +239,18 @@ h5 span, .h5 span {
   color: #01A229;
 }
 
+@media (min-width: 1025px) and (max-width: 1199px) {
+  h5, .h5 {
+    margin-bottom: truepx;
+    font-size: truepx;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  h5, .h5 {
+    margin-bottom: truepx;
+    font-size: truepx;
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   h5, .h5 {
     margin-bottom: truepx;
