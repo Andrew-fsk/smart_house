@@ -11,7 +11,18 @@
     margin-right: 15px;
   }
   &:hover{
-    &:after{
+    @include breakpoint(sm-down){
+      .lang-trigger{
+        @include rotate(0);
+      }
+      .lang-item{
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+  &:hover,&.hovered{
+    .lang-trigger{
       @include rotate(-180);
     }
     .lang-item{
@@ -19,7 +30,8 @@
       pointer-events: all;
     }
   }
-  &:after{
+
+  .lang-trigger{
     content: '';
     position: absolute;
     right: 6px;
@@ -31,6 +43,7 @@
     background-repeat: no-repeat;
     background-image: url("../img/svg/down-arrow.svg");
     transition: all .2s;
+    z-index: 1;
   }
   .lang-item{
     width: 24px;

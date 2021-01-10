@@ -158,6 +158,11 @@ $(document).ready(function ($) {
             }).filter(':first').click();
     });
 
+        $('.lang-trigger').on('click touchend', function () {
+            $(this).parent().toggleClass('hovered');
+            return false;
+        })
+
     let slider1 = document.getElementById('square-slide')
     if(slider1){
         let m2 = 10;
