@@ -2,6 +2,11 @@ extends base
 
 block content
     .padding-top.container.contact
+        ul(class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList")
+            li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                a(href="./index.html" itemprop="item") Главная
+            li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                span(itemprop="item") Контакты
         h1 Контакты
         .title-text Мы работаем во всех регионах Украины, звоните:
         .contact-list.our-map

@@ -1,0 +1,38 @@
+.breadcrumbs{
+  margin-left: 0;
+  margin-bottom: 35px;
+  @include breakpoint(sm-down){
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  @include flexbox;
+  li{
+    &:first-of-type{
+      margin-left: 0;
+      &:after{
+        content: initial;
+      }
+    }
+    margin-left: 25px;
+    &:after{
+      left: -15px;
+      top: 6px;
+      width: 5px;
+      height: 5px;
+    }
+  }
+  a,span{
+    transition: all .2s;
+    text-decoration: none;
+    color: #939393;
+    font-weight: 600;
+    @include breakpoint(sm-down){
+      white-space: nowrap;
+    }
+  }
+  a{
+    &:hover{
+      color: $green;
+    }
+  }
+}

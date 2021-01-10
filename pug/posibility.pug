@@ -2,6 +2,11 @@ extends base
 
 block content
     .padding-top.container.posibility.text-sector
+        ul(class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList")
+            li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                a(href="./index.html" itemprop="item") Главная
+            li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                span(itemprop="item") Управление освещением
         .main-image.object-fit
             .text
                 h1 Управление освещением

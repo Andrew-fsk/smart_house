@@ -2,6 +2,11 @@ extends base
 
 block content
     .page-404-wrap
+        ul(class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList")
+            li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                a(href="./index.html" itemprop="item") Главная
+            li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                span(itemprop="item") 404
         .container
             .row-404
                 .number-404 404
