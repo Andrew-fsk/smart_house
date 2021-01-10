@@ -29,6 +29,7 @@ body{padding: 0;}
 @import "components/object-fit";
 @import "components/validation";
 @import "components/breadcrumbs";
+@import "components/pagination";
 
 //widgets
 //@import "widgets/pagination";
@@ -54,3 +55,4 @@ body{padding: 0;}
 @import "layouts/projects";
 @import "layouts/contact-page";
 @import "layouts/show-room";
+@import "layouts/blog";
