@@ -346,7 +346,7 @@ body.fancybox-iosfix {
 .fancybox-slide > * {
   display: inline-block;
   position: relative;
-  max-width: calc(100% - 30px);
+  max-width: 100%;
   margin: 44px 0 44px;
   border-width: 0;
   vertical-align: middle;

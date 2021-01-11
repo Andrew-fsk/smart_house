@@ -248,3 +248,70 @@ p.green{
     padding: 0;
   }
 }
+
+.document-list{
+  @include flexbox;
+  @include flex-wrap(wrap);
+  margin: 0 -7.5px;
+  .document-item{
+    cursor: pointer;
+    width: calc(20% - 15px);
+    margin: 0 7.5px 15px 7.5px;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    @include breakpoint(md-down){
+      height: 245px;
+    }
+    @include breakpoint(sm-down){
+      width: calc(25% - 15px);
+    }
+    @include breakpoint(xs){
+      width: calc(33.33% - 15px);
+    }
+    @include breakpoint(smxs){
+      width: calc(50% - 15px);
+    }
+    @include breakpoint(ultra-sxs){
+      height: 200px;
+    }
+    &:after{
+      pointer-events: none;
+      opacity: 0;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.2);
+      transition: all .2s;
+    }
+    &:hover{
+      &:after{
+        opacity: 1;
+      }
+      .zoom{
+        opacity: 1;
+      }
+    }
+  }
+  .zoom{
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    z-index: 2;
+    cursor: pointer;
+    background-position: center;
+    background-size: 20px;
+    transition: all .2s;
+    background-repeat: no-repeat;
+    background-image: url("../img/svg/zoom.svg");
+  }
+}
