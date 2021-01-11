@@ -3,6 +3,12 @@
   @include breakpoint(sm-down){
     padding: 50px 0;
   }
+  .calc-button{
+    margin-bottom: 30px;
+    @include breakpoint(sm-down){
+      margin-bottom: 0;
+    }
+  }
   h2{
     margin-bottom: 60px;
     @include breakpoint(sm-down){

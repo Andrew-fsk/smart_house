@@ -1,0 +1,34 @@
+extends base
+
+block content
+    .padding-top.padding-bottom.calc-page
+        .container
+            ul(class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList")
+                li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                    a(href="#" itemprop="item") Главная
+                li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                    span(href="./index.html" itemprop="item") Узнать стоимость
+            h1 Узнать стоимость
+        .calc-block-wrap
+            .container
+                .calc-block
+                    .row
+                        .calc-column.left
+                            div.left-top
+                                .square-line
+                                    .square-text Общая площадь:
+                                    .square <span>0</span> м<sup>2</sup>
+                                .square-slide-wrap
+                                    #square-slide
+                            div.left-bottom
+                                .total-line Итого: <span>250 грн</span>
+                                a(href='#').calc-button Отправить расчет
+                                .calc-text Данный расчет носит предварительный характер и указывает на порядок цены. Стоимость в данном случае не является окончательной, она может изменяться, как в меньшую, так и в большую сторону
+
+                        .calc-column.right
+                            each val, index  in ['Электричество','Мультирум','Ворота','Климат','Ролеты','Отопление','Датчик протечки воды','Датчик движения','Датчик дыма','Сигнализация','Сценарий релакс']
+                                label.calc-item
+                                    img(src='../img/idea 1.png').icon
+                                    span(data-sum=`${(index + 1) * 10}`).title= val
+                                    input(type='checkbox')
+                                    span.checkbox

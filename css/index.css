@@ -5456,6 +5456,19 @@ footer .offices:after {
     padding: 50px 0;
   }
 }
+.calc-block-wrap .calc-button {
+  margin-bottom: 30px;
+}
+@media (max-width: 1024px) {
+  .calc-block-wrap .calc-button {
+    margin-bottom: 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .calc-block-wrap .calc-button {
+    margin-bottom: 0;
+  }
+}
 .calc-block-wrap h2 {
   margin-bottom: 60px;
 }

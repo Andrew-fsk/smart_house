@@ -479,4 +479,22 @@ p.green {
   }
 }
 
+.padding-bottom {
+  padding-bottom: 100px;
+}
+@media (max-width: 1024px) {
+  .padding-bottom {
+    padding-bottom: 50px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .padding-bottom {
+    padding-bottom: 50px;
+  }
+}
+
+.calc-page .calc-block-wrap {
+  padding: 0;
+}
+
 /*# sourceMappingURL=base.css.map */
