@@ -1,0 +1,30 @@
+extends base
+block content
+    .padding-top
+        .container
+            ul(class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList")
+                li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                    a(href="#" itemprop="item") Главная
+                li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                    span(href="./index.html" itemprop="item") Видео о нас
+            h1 Видео о нас
+            .video-list
+                each value in Array(9)
+                    .project.object-fit
+                        img(src='../img/project.png')
+                        a(href="https://www.youtube.com/embed/GhP_nSPHBkw?autoplay=1" class='fancybox.iframe various' data-type='iframe').play-circle.white
+            .blog-bottom
+                .ac-jc
+                    a(href='#').load-more Показать ещё
+                .ac-jc
+                    ul.pagination
+                        li.prev
+                            a(href='#')
+                        li.pagination-item.active
+                            a(href='#') 1
+                        li.pagination-item
+                            a(href='#') 2
+                        li.pagination-item
+                            a(href='#') 3
+                        li.next
+                            a(href='#')

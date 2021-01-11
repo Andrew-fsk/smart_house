@@ -84,3 +84,47 @@
     width: 100%;
   }
 }
+
+.video-list{
+  @include flexbox;
+  @include flex-wrap(wrap);
+  margin: 0 -15px;
+  @include breakpoint(sm-down){
+    margin: 0 -7.5px;
+  }
+  .project{
+    width: calc(33.33% - 30px);
+    height: 330px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    margin: 0 15px 30px 15px;
+    @include breakpoint(md-down){
+      height: 240px;
+    }
+    @include breakpoint(sm-down){
+      width: calc(50% - 15px);
+      margin: 0 7.5px 15px 7.5px;
+    }
+    @include breakpoint(smxs){
+      height: 180px;
+    }
+  }
+  .play-circle{
+    width: 80px;
+    height: 80px;
+    background-image: url("../img/svg/play white.svg");
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+    @include breakpoint(xs){
+      width: 60px;
+      height: 60px;
+      left: calc(50% - 30px);
+      top: calc(50% - 30px);
+    }
+    &:after,
+    &:before{
+      content: initial;
+    }
+  }
+}
