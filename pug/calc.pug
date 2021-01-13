@@ -13,7 +13,7 @@ block content
             .container
                 .calc-block
                     .row
-                        .calc-column.left
+                        .calc-column.left.animated-block-left
                             div.left-top
                                 .square-line
                                     .square-text Общая площадь:
@@ -27,7 +27,7 @@ block content
 
                         .calc-column.right
                             each val, index  in ['Электричество','Мультирум','Ворота','Климат','Ролеты','Отопление','Датчик протечки воды','Датчик движения','Датчик дыма','Сигнализация','Сценарий релакс']
-                                label.calc-item
+                                label.calc-item.animated-block
                                     img(src='../img/idea 1.png').icon
                                     span(data-sum=`${(index + 1) * 10}`).title= val
                                     input(type='checkbox')

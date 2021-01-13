@@ -12,6 +12,49 @@ $(document).ready(function ($) {
         }
     });
 
+    $(".num-item .num").counterUp({delay:10,time:2500});
+
+    $('.animated-block').waypoint(function (dir) {
+        if (dir === 'down') {
+            var $el = $(this);
+            $el.addClass('active-block');
+        }
+    }, {
+        offset: '80%'
+    });
+    $('.animated-block-left').waypoint(function (dir) {
+        if (dir === 'down') {
+            var $el = $(this);
+            $el.addClass('active-block');
+        }
+    }, {
+        offset: '80%'
+    });
+    $('.animated-block-after').waypoint(function (dir) {
+        if (dir === 'down') {
+            $(this).addClass('active-block');
+        }
+    }, {
+        offset: '60%'
+    });
+
+/*
+    $('.clients-slider').waypoint(function (dir) {
+        if (dir === 'down') {
+            $('.clients-slider').slick('slickGoTo', 0);
+        }
+    }, {
+        offset: '60%'
+    });
+
+    $('.project-slider').waypoint(function (dir) {
+        if (dir === 'down') {
+            $('.project-slider').slick('slickGoTo', 0);
+        }
+    }, {
+        offset: '60%'
+    });*/
+
     $(document).on('click touchend', '.main-slider .calc-button', function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $(".calc-block-wrap").offset().top - $('header').innerHeight()
@@ -56,6 +99,9 @@ $(document).ready(function ($) {
         dots: false,
         infinite: true,
         speed: 500,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        focusOnSelect: true,
         fade: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -71,6 +117,9 @@ $(document).ready(function ($) {
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        focusOnSelect: true,
         swipeToSlide: true,
         responsive: [
             {
@@ -98,6 +147,9 @@ $(document).ready(function ($) {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        focusOnSelect: true,
         swipeToSlide: true,
     });
 
@@ -108,6 +160,9 @@ $(document).ready(function ($) {
         fade: false,
         slidesToShow: 5,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        focusOnSelect: true,
         arrows: true,
         swipeToSlide: true,
         responsive: [

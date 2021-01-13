@@ -17,7 +17,7 @@ block content
                 a(href='#').more Больше функций
             .function-list
                 each val, index in ['Мультирум','Раздвижные ворота','Климат','Ролеты','Безопасность','Отопление']
-                    a(href="#").item.object-fit
+                    a(href="#").item.object-fit.animated-block
                         img(src='../img/d1.png')
                         .title=val
             .ac-jc
@@ -42,12 +42,12 @@ block content
                         .right
                             .title c MiMiSmart #{index}
                             img(src='../img/tab2.png')
-    .steps-wrap
+    .steps-wrap.animated-block-after
         .container
             h2 <span>Этапы внедрения</span> системы умный дом
             .step-list
                 each value, index in ['Проектирование','Сборка электрощитков и автоматики','Программирование и отладка','Гарантийное обслуживание','Тестовая эксплуатация','Монтаж и пусконаладка']
-                    .step
+                    .step.animated-block
                         .icon
                             img(src='../img/icon.png')
                             .num=index + 1
@@ -58,7 +58,7 @@ block content
             .calc-block
                 h2 <span>Рассчитайте </span>свой умный дом
                 .row
-                    .calc-column.left
+                    .calc-column.left.animated-block-left
                         div.left-top
                             .square-line
                                 .square-text Общая площадь:
@@ -72,7 +72,7 @@ block content
 
                     .calc-column.right
                         each val, index  in ['Электричество','Мультирум','Ворота','Климат','Ролеты','Отопление','Датчик протечки воды','Датчик движения','Датчик дыма','Сигнализация','Сценарий релакс']
-                            label.calc-item
+                            label.calc-item.animated-block
                                 img(src='../img/idea 1.png').icon
                                 span(data-sum=`${(index+1) * 10}`).title= val
                                 input(type='checkbox')
@@ -95,7 +95,7 @@ block content
             h2  Посетите наши <span>шоу-румы</span>
             .show-room-list
                 each value in ['Капля колорита','Нежный дом','Просто почувствуй','Будь в топе']
-                    .item
+                    .item.animated-block
                         .column
                             .info
                                 .title "#{value}"

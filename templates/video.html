@@ -10,6 +10,7 @@
     <meta charset="utf-8">
   </head>
   <body>
+    <canvas id="demo-canvas"></canvas>
     <div class="wrap">
       <header>
         <div class="container logo-container"><a class="logo-wrap" href="/"><img src="../img/logo.png"></a>
@@ -88,19 +89,21 @@
         </ul>
         <h1>Видеопрезентация <span>Умного Дома </span></h1>
         <div class="title-text">Подробно расскажем и покажем в онлайн-режиме возможности Умного Дома!</div>
-        <div class="video-form object-fit"><img src="../img/video form.png">
-          <form class="form js-form" method="post" action="">
-            <div class="form-text">Запишитесь на видеопрезентацию онлайн</div>
-            <div class="validation-field">
-              <input class="js-input" type="text" name="first_name" required><span class="placeholder">Представтесь, пожалуйста</span>
-            </div>
-            <div class="validation-field">
-              <input class="js-input" type="text" name="phone" required><span class="placeholder">Телефон</span>
-            </div>
-            <label class="button form-submit"><span>Записаться</span>
-              <input class="js-submit" type="submit" value="Отправить">
-            </label>
-          </form>
+        <div class="form-wrap"><img class="other" src="../img/camera.png"><img class="other" src="../img/camera.png"><img class="other" src="../img/camera.png"><img class="other" src="../img/camera.png"><img class="other" src="../img/camera.png"><img class="other" src="../img/camera.png"><img class="other" src="../img/camera.png"><img class="other" src="../img/camera.png"><img class="main" src="../img/logo form.png">
+          <div class="video-form object-fit"><img src="../img/video form.png">
+            <form class="form js-form" method="post" action="">
+              <div class="form-text">Запишитесь на видеопрезентацию онлайн</div>
+              <div class="validation-field">
+                <input class="js-input" type="text" name="first_name" required><span class="placeholder">Представтесь, пожалуйста</span>
+              </div>
+              <div class="validation-field">
+                <input class="js-input" type="text" name="phone" required><span class="placeholder">Телефон</span>
+              </div>
+              <label class="button form-submit"><span>Записаться</span>
+                <input class="js-submit" type="submit" value="Отправить">
+              </label>
+            </form>
+          </div>
         </div>
         <div class="completed-projects-wrap">
           <div class="title-line">
@@ -169,7 +172,7 @@
             <div class="work-time">Пн-Пт с 9-00 до 18-00</div>
           </div>
           <div class="social-list"><a class="social-item inst" href="#"></a><a class="social-item facebook" href="#"></a><a class="social-item vk" href="#"></a></div>
-          <div class="copyriting">Перепечатка материалов с сайта<br> запрещена.<br> 2009-2020. SmartHouse <br>Все права защищены.</div>
+          <div class="copyriting">Перепечатка материалов с сайта<br> запрещена.<br> 2009-2020. SmartHouse<br>Все права защищены.</div>
         </div>
         <div class="column">
           <div class="title">Возможности</div>
@@ -217,16 +220,20 @@
             </div>
           </div>
         </div>
-        <div class="copyriting">Перепечатка материалов с сайта<br> запрещена.<br> 2009-2020. SmartHouse <br>Все права защищены.</div>
+        <div class="copyriting">Перепечатка материалов с сайта<br> запрещена.<br> 2009-2020. SmartHouse<br>Все права защищены.</div>
       </div>
     </footer>
-    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/ajquery-1.12.0.min.js"></script>
     <script src="../js/libs/popup-slide.js"></script>
     <script src="../js/libs/scrollbar.js"></script>
     <script src="../js/libs/jquery.fancybox3.min.js"></script>
     <script src="../js/libs/slick.js"></script>
     <script src="../js/libs/nouislider.js"></script>
     <script src="../js/libs/jquery.validate.min.js"></script>
+    <script src="../js/libs/jquery.counterup.js"></script>
+    <script src="../js/libs/waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="../js/libs/init_min.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>

@@ -315,3 +315,53 @@ p.green{
     background-image: url("../img/svg/zoom.svg");
   }
 }
+
+#demo-canvas{
+  display: block;
+  pointer-events: none;
+  position: fixed;
+  z-index: 25;
+  left: 0;
+  top: 0;
+  @include breakpoint(sm-down){
+    opacity: 0.4;
+  }
+}
+
+.animated-block{
+  opacity: 0;
+  @include transform(translateY(30%));
+  transition: all .3s;
+  &.active-block{
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+  @for $i from 1 through 20 {
+    &:nth-child(#{$i}) {
+      transition-delay: #{$i * .1}s;
+    }
+  }
+}
+
+.animated-block-after{
+  .step-list:after{
+    opacity: 0;
+    @include transform(translateY(30%));
+    transition: all .3s;
+    transition-delay: .3s;
+  }
+  &.active-block .step-list:after{
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}
+
+.animated-block-left{
+  opacity: 0;
+  @include transform(translateX(-30%));
+  transition: all .5s;
+  &.active-block{
+    opacity: 1;
+    @include transform(translateX(0));
+  }
+}
