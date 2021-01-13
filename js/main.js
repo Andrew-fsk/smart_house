@@ -38,7 +38,6 @@ $(document).ready(function ($) {
         offset: '60%'
     });
 
-/*
     $('.clients-slider').waypoint(function (dir) {
         if (dir === 'down') {
             $('.clients-slider').slick('slickGoTo', 0);
@@ -53,7 +52,7 @@ $(document).ready(function ($) {
         }
     }, {
         offset: '60%'
-    });*/
+    });
 
     $(document).on('click touchend', '.main-slider .calc-button', function () {
         $([document.documentElement, document.body]).animate({
